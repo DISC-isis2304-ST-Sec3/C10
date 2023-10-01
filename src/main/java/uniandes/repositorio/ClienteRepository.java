@@ -25,7 +25,7 @@ public interface ClienteRepository extends JpaRepository<Cliente,Integer>{
     @Query(value = "INSERT INTO clientes (Nombre_2,Apellido,Tipo,Direccion,Telefono,Plandeconsumoactual) VALUES(hotel_sequence.nextval, :Nombre_2, :Apellido, :Tipo, :Direccion, :Telefono, :Plandeconsumoactual )")
     void insertarCliente(@Param("Nombre_2") String Nombre_2, @Param("Apellido") String Apellido, 
     @Param("Tipo") String Tipo,@Param("Direccion") String Direccion
-    ,@Param("Telefono") int Telefono,@Param("Plandeconsumoactual") String Plandeconsumoactual);
+    ,@Param("Telefono") int Telefono,@Param("Plandeconsumoactual") int Plandeconsumoactual);
 
 
     @Modifying
@@ -33,7 +33,7 @@ public interface ClienteRepository extends JpaRepository<Cliente,Integer>{
     @Query(value = "UPDATE clientes SET Nombre_2 =:Nombre_2, Apellido=:Apelliod, Tipo=:Tipo, Direccion=:Direccion, Telefono=:Telefono, Plandeconsumoactual=:Plandeconsumoactual WHERE id =:id", nativeQuery = true)
     void actualizarCliente(@Param("Nombre_2") String Nombre_2, @Param("Apellido") String Apellido, 
     @Param("Tipo") String Tipo,@Param("Direccion") String Direccion
-    ,@Param("Telefono") int Telefono,@Param("Plandeconsumoactual") String Plandeconsumoactual);
+    ,@Param("Telefono") int Telefono,@Param("Plandeconsumoactual") int Plandeconsumoactual);
 
     @Modifying
     @Transactional
