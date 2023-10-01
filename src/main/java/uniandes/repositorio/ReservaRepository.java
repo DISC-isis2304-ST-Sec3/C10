@@ -16,7 +16,7 @@ public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
     @Query(value = "SELECT.* FROM reservas", nativeQuery = true)
     Collection<Reserva> darReservas();
 
-    @Query(value = "SELECT.* FROM bares WHERE id = :id", nativeQuery = true)
+    @Query(value = "SELECT.* FROM reservas WHERE id = :id", nativeQuery = true)
     Reserva darReserva(@Param("id") int id);
 
     @Modifying
@@ -38,7 +38,7 @@ public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM reservas WHERE id=.id", nativeQuery = true)
+    @Query(value = "DELETE FROM reservas WHERE id=:id", nativeQuery = true)
     void eliminarReserva(@Param("id") int id);
 
 }
