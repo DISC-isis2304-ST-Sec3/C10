@@ -38,7 +38,7 @@ public interface ReservaSpaRepository extends JpaRepository<ReservaSpa, Integer>
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM reservasSPA WHERE id=.id",nativeQuery = true)
+    @Query(value = "DELETE FROM reservasSPA WHERE id=:id",nativeQuery = true)
     void eliminarReserva(@Param("id") int id);
     
 

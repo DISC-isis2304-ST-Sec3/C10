@@ -14,7 +14,7 @@ import uniandes.edu.co.proyecto.modelo.Servicio;
 
 public interface ServicioRepository extends JpaRepository<Servicio,Integer> {
 
-     @Query(value = "SELECT.* FROM servicios",nativeQuery = true)
+    @Query(value = "SELECT.* FROM servicios",nativeQuery = true)
     Collection<Servicio> darServicios();
 
     @Query(value= "SELECT.* FROM servicios WHERE id = :id",nativeQuery = true)
@@ -34,7 +34,7 @@ public interface ServicioRepository extends JpaRepository<Servicio,Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM servicios WHERE id=.id",nativeQuery = true)
+    @Query(value = "DELETE FROM servicios WHERE id=:id",nativeQuery = true)
     void eliminarReserva(@Param("id") int id);
     
 }
