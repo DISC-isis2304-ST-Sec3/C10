@@ -1,7 +1,5 @@
 package uniandes.edu.co.proyecto.modelo;
 
-import org.springframework.data.repository.query.parser.Part.IgnoreCaseType;
-
 public class Habitacion {
     private Integer Numero;
     private String Tipo;
