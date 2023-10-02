@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="ReservasSPA")
+@Table(name = "ReservasSPA")
 
 public class ReservaSpa {
 
@@ -17,9 +17,13 @@ public class ReservaSpa {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Date Horaio;
-    
+
     public ReservaSpa(Date horaio) {
         Horaio = horaio;
+    }
+
+    public ReservaSpa() {
+        ;
     }
 
     public Integer getId() {
@@ -38,8 +42,4 @@ public class ReservaSpa {
         Horaio = horaio;
     }
 
-    
-
-    
-    
 }

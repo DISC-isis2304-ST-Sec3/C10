@@ -12,29 +12,29 @@ import org.springframework.transaction.annotation.Transactional;
 import uniandes.edu.co.proyecto.modelo.Reserva;
 import uniandes.edu.co.proyecto.modelo.Servicio;
 
-public interface ServicioRepository extends JpaRepository<Servicio,Integer> {
+public interface ServicioRepository extends JpaRepository<Servicio, Integer> {
 
-    @Query(value = "SELECT.* FROM servicios",nativeQuery = true)
+    @Query(value = "SELECT.* FROM servicios", nativeQuery = true)
     Collection<Servicio> darServicios();
 
-    @Query(value= "SELECT.* FROM servicios WHERE id = :id",nativeQuery = true)
+    @Query(value = "SELECT.* FROM servicios WHERE id = :id", nativeQuery = true)
     Reserva darServisio(@Param("id") int id);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO servicios (nombre, capacidad, Horario) VALUES(hotel_sequence.nextval, :nombre, :capacidad, :horario)")
-    void insertarReserva(@Param("nombre") String nombre, @Param("capacidad") int capacidad, 
-    @Param("Horario") Date Horario);
-
-
-    @Modifying
-    @Transactional
-    @Query(value = "UPDATE servicios SET nombre =:nombre, capacidad=:capacidad, Horario=:Horario WHERE id =:id", nativeQuery = true)
-    void actualizarReserva(@Param("nombre") String nombre, @Param("capacidad") int capacidad, @Param("Horario") Date Horario);
+    @Query(value = "INSERT INTO servicios (id, nombre, capacidad, Horario) VALUES(hotel_sequence.nextval, :nombre, :capacidad, :horario)")
+    void insertarReserva(@Param("id") int id, @Param("nombre") String nombre, @Param("capacidad") int capacidad,
+            @Param("Horario") Date Horario);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM servicios WHERE id=:id",nativeQuery = true)
+    @Query(value = "UPDATE servicios SET id =:id, nombre =:nombre, capacidad=:capacidad, Horario=:Horario WHERE id =:id", nativeQuery = true)
+    void actualizarReserva(@Param("id") int id, @Param("nombre") String nombre, @Param("capacidad") int capacidad,
+            @Param("Horario") Date Horario);
+
+    @Modifying
+    @Transactional
+    @Query(value = "DELETE FROM servicios WHERE id=:id", nativeQuery = true)
     void eliminarReserva(@Param("id") int id);
-    
+
 }
