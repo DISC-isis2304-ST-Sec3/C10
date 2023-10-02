@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="hotelquesupervisa" directorySegmentName="seg_0" id="33765188-C954-C437-0EE3-42ECA39F2A0F">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:00:06 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<sourcePk>CDA902D0-4925-DE68-A934-CFB5512925F9</sourcePk>
+<targetPk>76FDCBFF-4202-B89F-A65E-0BF0E39AF2B1</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DD2F3E90-BEC7-11C4-3348-6CEC46DBBF00</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>64AF5188-4FE2-9DD9-2F1E-A0F0A683533A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C80D82F0-7CCA-9D42-5D0E-F6D5AEC7483A" name="reservarSPA">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SPA_nombre" id="19C1B747-2459-4953-46D1-F6D6D545D2E1">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="19426395-4414-22A6-812C-BCCF7F7D8A56" referredColumn="E55FD09B-B483-97E6-7668-F0C2C6F46B8C"/>
+</associations>
+</Column>
+<Column name="ReservaSPA_ReservaSPA_ID" id="40C65408-8F4F-6338-4A0D-326AF7FF54D3">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D6426BE6-E48D-5B14-669F-38C49860410A" referredColumn="F44CF610-C962-F480-CB5F-1F1409FADA99"/>
+</associations>
+</Column>
+<Column name="ReservaSPA_Habitacion_Numero" id="8ECB5CA6-9F05-CC13-85F7-5B6DA657886F">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:13:54 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F916C26D-24D5-E3F9-4834-B5540744CE00" referredColumn="BC6497C4-D2F2-51BD-31C6-1FBFD3A5F8CE"/>
+</associations>
+</Column>
+<Column name="ReservaSPA_Num_reserva" id="F5650689-3AA8-99D0-46FA-58EA0D6E55E2">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:13:54 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F916C26D-24D5-E3F9-4834-B5540744CE00" referredColumn="DFE25D22-1337-4C15-614B-38D72AFE7109"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F48F7A68-B41C-A453-B1D7-4B8E6C53BB29" name="Relation_25_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19C1B747-2459-4953-46D1-F6D6D545D2E1"/>
+<colUsage columnID="40C65408-8F4F-6338-4A0D-326AF7FF54D3"/>
+<colUsage columnID="8ECB5CA6-9F05-CC13-85F7-5B6DA657886F"/>
+<colUsage columnID="F5650689-3AA8-99D0-46FA-58EA0D6E55E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3CC02428-0F69-58D9-F5BD-FE1E5DB0585A" name="Relation_25_SPA_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>992E8C4B-7703-3606-E169-04905B97A967</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19C1B747-2459-4953-46D1-F6D6D545D2E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EAF04B27-E995-9934-042E-BC58BEBE2EAC" name="Relation_25_ReservaSPA_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>992E8C4B-7703-3606-E169-04905B97A967</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40C65408-8F4F-6338-4A0D-326AF7FF54D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2EB0A21D-7788-1CCD-8BD8-4FE1D45E22D3" name="Relation_25_ReservaSPA_FKv1">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:13:54 UTC</createdTime>
+<generatorID>992E8C4B-7703-3606-E169-04905B97A967</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8ECB5CA6-9F05-CC13-85F7-5B6DA657886F"/>
+<colUsage columnID="F5650689-3AA8-99D0-46FA-58EA0D6E55E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

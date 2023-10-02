@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="reservarSPA" directorySegmentName="seg_0" id="992E8C4B-7703-3606-E169-04905B97A967">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:23:23 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>8F106B7A-DD9D-BBEA-B73B-2C6074137480</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>005EA749-D619-9A6A-F13D-04743FE90D8A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

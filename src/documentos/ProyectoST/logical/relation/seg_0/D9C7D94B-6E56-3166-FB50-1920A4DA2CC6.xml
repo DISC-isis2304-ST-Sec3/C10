@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Habitacion PlanDeConsumo FK" directorySegmentName="seg_0" id="D9C7D94B-6E56-3166-FB50-1920A4DA2CC6">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:58:18 UTC</createdTime>
+<ownerDesignName>Proyecto1</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<sourcePk>E28CA474-D557-874A-4477-C6A05C4F7735</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1BDF3D2C-4ECE-32F7-F39C-0C05F152CC6D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FCF3B1B0-D32F-4189-A0D1-863E63E38D8E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

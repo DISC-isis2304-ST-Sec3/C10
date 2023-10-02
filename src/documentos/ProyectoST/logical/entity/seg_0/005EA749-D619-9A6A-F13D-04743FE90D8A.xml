@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="005EA749-D619-9A6A-F13D-04743FE90D8A" name="ReservaSPA">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:21:46 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Num_reserva" id="C7D602E5-4241-FF13-15C0-D283B0FEB45A">
+<createdBy>Samuel Ramírez</createdBy>
+<createdTime>2023-09-29 21:42:08 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha" id="D45D42DC-04CF-A7C5-2D42-55736E883D52">
+<createdBy>Samuel Ramírez</createdBy>
+<createdTime>2023-09-29 21:42:32 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Numero" id="52C4D122-48A7-87FF-F160-6573C5844E73">
+<createdBy>Samuel Ramírez</createdBy>
+<createdTime>2023-09-29 21:46:47 UTC</createdTime>
+<generatorID>B2C97D60-3E89-BBF1-84A3-466E533DE2F5</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>D392C95B-9E57-070C-4B9F-09A158E31CFC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hora" id="92F73A31-648E-D773-4580-A0D1B7E78809">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:12:31 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="28F53179-6AAB-FF8C-E53C-15AD916E5A9E">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:11:23 UTC</createdTime>
+<generatorID>C33EEDF6-450C-6A21-A859-138DC13F2191</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>C8023924-E308-66F3-3D26-86352B861596</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C525F4B8-0D99-E1E5-345A-2C71B1F9F426" name="ReservaSPA PK">
+<createdBy>Samuel Ramírez</createdBy>
+<createdTime>2023-10-01 13:51:29 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>52C4D122-48A7-87FF-F160-6573C5844E73</attributeRef>
+<attributeRef>C7D602E5-4241-FF13-15C0-D283B0FEB45A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

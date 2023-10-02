@@ -24,18 +24,18 @@ public class Consumo {
 
     @ManyToOne
     @JoinColumn(name = "servicio_id", referencedColumnName = "id")
-    private Integer servicioID;
+    private Servicio servicioID;
 
     @ManyToOne
     @JoinColumn(name = "numero_Reserva", referencedColumnName = "numero")
-    private Integer numeroReserva;
+    private Reserva numeroReserva;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-    private int usuarioid;
+    private Usuario usuarioid;
 
     public Consumo(Date fecha, String descripcion, Integer precioUnitario, Integer cantidad, Integer total,
-            Integer servicioID, Integer numeroReserva, int usuarioid) {
+            Servicio servicioID, Reserva numeroReserva, Usuario usuarioid) {
         Fecha = fecha;
         this.descripcion = descripcion;
         this.precioUnitario = precioUnitario;
@@ -98,27 +98,27 @@ public class Consumo {
         this.total = total;
     }
 
-    public int getUsuarioid() {
+    public Usuario getUsuarioid() {
         return usuarioid;
     }
 
-    public void setUsuarioid(int usuarioid) {
+    public void setUsuarioid(Usuario usuarioid) {
         this.usuarioid = usuarioid;
     }
 
-    public Integer getServicioID() {
+    public Servicio getServicioID() {
         return servicioID;
     }
 
-    public void setServicioID(Integer servicioID) {
+    public void setServicioID(Servicio servicioID) {
         this.servicioID = servicioID;
     }
 
-    public Integer getNumeroReserva() {
+    public Reserva getNumeroReserva() {
         return numeroReserva;
     }
 
-    public void setNumeroReserva(Integer numeroReserva) {
+    public void setNumeroReserva(Reserva numeroReserva) {
         this.numeroReserva = numeroReserva;
     }
 

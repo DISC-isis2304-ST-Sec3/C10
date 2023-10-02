@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EA74AFE4-4469-B46E-F14D-5DD708E060EA" name="Consumo">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:25:38 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Fecha" id="A51F829C-2EBB-7088-1A0A-0CC55A711272">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:19:44 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="894F5527-4D60-D563-485C-34A2408BD298">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:20:04 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precioUnitario" id="B980E022-048A-4E04-6881-80208DF5BDB2">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:20:21 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cantidad" id="EFAF1A82-3D70-E08B-69E6-2FB0359C6421">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:20:56 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total" id="6BA8C395-6F1B-AE08-E117-06376EC4E3EC">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:21:47 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Empleado Id" id="2A84E2E0-9F57-DD1B-BF39-D7A7A80BF6E4">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:30:21 UTC</createdTime>
+<generatorID>80207556-338A-1BF0-D25A-D7B902787365</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>B590708E-4D47-7659-5EFB-1BA3D8812AFC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id 1" id="B1CDE1A6-DF57-8B2C-D4FD-F2256DBFCB54">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:58:39 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="D21C8F67-4696-4180-D91C-41CEECE4655E">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 18:39:14 UTC</createdTime>
+<generatorID>BF72A85C-4E8C-F659-1A65-B0892CC81482</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>FAEFF5C6-61F4-A44E-00AF-B8BEDE092C9A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="D1ED2493-C5E0-F576-B6C5-2DB48C1B215F">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:11:23 UTC</createdTime>
+<generatorID>BF72A85C-4E8C-F659-1A65-B0892CC81482</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>8AD59507-9622-EEA0-CDD3-8282A08659A8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EEF92DE0-C1D0-DEEC-F488-313F32BD7029" name="Consumo PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:58:53 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B1CDE1A6-DF57-8B2C-D4FD-F2256DBFCB54</attributeRef>
+<attributeRef>D21C8F67-4696-4180-D91C-41CEECE4655E</attributeRef>
+<attributeRef>D1ED2493-C5E0-F576-B6C5-2DB48C1B215F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,5 +1,8 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
 public class Habitacion {
     private Integer Numero;
     private String Tipo;
@@ -7,18 +10,22 @@ public class Habitacion {
     private String Dotacion;
     private Integer Tarifa;
     private String estado;
-    public int planDeConsumo;
+
+    @ManyToOne
+    @JoinColumn(name = "PlanDeConsumo", referencedColumnName = "id")
+    public PlanDeConsumo planDeConsumo;
 
     public Habitacion() {
         ;
     }
 
-    public Habitacion(Integer numero, String tipo, Integer capacidadMax, String dotacion, Integer tarifa) {
+    public Habitacion(Integer numero, String tipo, Integer capacidadMax, String dotacion, Integer tarifa, PlanDeConsumo planDeConsumo) {
         Numero = numero;
         Tipo = tipo;
         CapacidadMax = capacidadMax;
         Dotacion = dotacion;
         Tarifa = tarifa;
+        this.planDeConsumo = planDeConsumo;
     }
 
     public Integer getNumero() {
@@ -69,11 +76,11 @@ public class Habitacion {
         this.estado = estado;
     }
 
-    public int getPlanDeConsumo() {
+    public PlanDeConsumo getPlanDeConsumo() {
         return planDeConsumo;
     }
 
-    public void setPlanDeConsumo(int planDeConsumo) {
+    public void setPlanDeConsumo(PlanDeConsumo planDeConsumo) {
         this.planDeConsumo = planDeConsumo;
     }
 

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Habitacion Hotel FK" directorySegmentName="seg_0" id="5969ED36-F054-C05E-0A45-56CA366DCB88">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:34:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<sourcePk>76FDCBFF-4202-B89F-A65E-0BF0E39AF2B1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>64AF5188-4FE2-9DD9-2F1E-A0F0A683533A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FCF3B1B0-D32F-4189-A0D1-863E63E38D8E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

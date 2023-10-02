@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="53ABF5BE-E765-54BC-898C-8AC513BC6636" name="Reserva">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:25:31 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="fechaEntrada" id="D225CCD3-5230-8415-0F87-F48EB05C614D">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:16:40 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FechaSalida" id="EFF2BCF0-E4D7-0F61-349B-1676F7BA0033">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:17:04 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NumeroPersonas" id="5FBE6F2C-F084-AA37-96C6-A9C767A8A680">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:17:22 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Estado" id="6706A7E8-A3D3-0E0C-18FB-0CECE1BECC20">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:17:37 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="FAEFF5C6-61F4-A44E-00AF-B8BEDE092C9A">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:20:39 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id1" id="1D3A524A-8705-113C-EEA5-E21DD1C26F18">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:33:56 UTC</createdTime>
+<generatorID>0EF5CBF1-2D81-C4ED-80BA-A3994C22AC62</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>B590708E-4D47-7659-5EFB-1BA3D8812AFC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="8AD59507-9622-EEA0-CDD3-8282A08659A8">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:11:23 UTC</createdTime>
+<generatorID>41BF6D37-9FEB-F4A6-7CB0-4A40753CF1FE</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>C8023924-E308-66F3-3D26-86352B861596</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3ADA5DB8-6629-FD4A-8D99-C9B6933E6C44" name="Reserva PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:19:08 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FAEFF5C6-61F4-A44E-00AF-B8BEDE092C9A</attributeRef>
+<attributeRef>8AD59507-9622-EEA0-CDD3-8282A08659A8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,6 +1,8 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -10,13 +12,18 @@ public class Cliente extends Usuario {
 
     private String Direccion;
     private Integer Telefono;
-    private String Plandeconsumoactual;
+
+    @ManyToOne
+    @JoinColumn(name = "PlanDeConsumo", referencedColumnName = "id")
+    private PlanDeConsumo Plandeconsumoactual;
 
     public Cliente(String nombre, String apellido, int num_documento, String tipo, String direccion,
-            int telefono, String plandeconsumoactual) {
+            int telefono, PlanDeConsumo plandeconsumoactual) {
         super(nombre, apellido, num_documento, tipo);
         Direccion = direccion;
         Telefono = telefono;
+
+        
         Plandeconsumoactual = plandeconsumoactual;
     }
 
@@ -40,11 +47,11 @@ public class Cliente extends Usuario {
         Telefono = telefono;
     }
 
-    public String getPlandeconsumoactual() {
+    public PlanDeConsumo getPlandeconsumoactual() {
         return Plandeconsumoactual;
     }
 
-    public void setPlandeconsumoactual(String plandeconsumoactual) {
+    public void setPlandeconsumoactual(PlanDeConsumo plandeconsumoactual) {
         Plandeconsumoactual = plandeconsumoactual;
     }
 
