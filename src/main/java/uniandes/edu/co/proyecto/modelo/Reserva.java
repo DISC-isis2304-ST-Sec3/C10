@@ -9,8 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="reservas")
-
+@Table(name = "reservas")
 
 public class Reserva {
     @Id
@@ -20,7 +19,8 @@ public class Reserva {
     private Date fechaSalida;
     private Integer NumeroPersonas;
     private String Estado;
-    
+    public int numeroDocumento;
+    public int idEmpleado;
 
     public Reserva(Date fechaEntrada, Date fechaSalida, Integer numeroPersonas, String estado) {
         this.fechaEntrada = fechaEntrada;
@@ -29,8 +29,9 @@ public class Reserva {
         Estado = estado;
     }
 
-    public Reserva()
-    {;}
+    public Reserva() {
+        ;
+    }
 
     public Date getFechaEntrada() {
         return fechaEntrada;
@@ -72,10 +73,20 @@ public class Reserva {
         this.id = id;
     }
 
-    
+    public int getNumeroDocumento() {
+        return numeroDocumento;
+    }
 
-    
+    public int getIdEmpleado() {
+        return idEmpleado;
+    }
 
-    
-    
+    public void setNumeroDocumento(int pNumeroDocumento) {
+        numeroDocumento = pNumeroDocumento;
+    }
+
+    public void setIdEmpleado(int pIdEmpleado) {
+        idEmpleado = pIdEmpleado;
+    }
+
 }

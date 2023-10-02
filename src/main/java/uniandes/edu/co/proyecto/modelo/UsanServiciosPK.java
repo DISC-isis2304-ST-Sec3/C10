@@ -5,22 +5,21 @@ import java.io.Serializable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
-public class Usan_serviciosPK implements Serializable{
+public class UsanServiciosPK implements Serializable {
 
     @ManyToOne
-    @JoinColumn(name = "NumerodeIdentificación_cliente",referencedColumnName = "NumerodeIdentificación")
+    @JoinColumn(name = "NumerodeIdentificación_cliente", referencedColumnName = "NumerodeIdentificación")
     private Cliente NumerodeIdentificación_cliente;
 
     @ManyToOne
-    @JoinColumn(name = "id_servicio",referencedColumnName = "id")
+    @JoinColumn(name = "id_servicio", referencedColumnName = "id")
     private Servicio id_Servicio;
 
-    public Usan_serviciosPK()
-    {
+    public UsanServiciosPK() {
         super();
     }
 
-    public Usan_serviciosPK(Cliente numerodeIdentificación_cliente, Servicio id_Servicio) {
+    public UsanServiciosPK(Cliente numerodeIdentificación_cliente, Servicio id_Servicio) {
         super();
         this.NumerodeIdentificación_cliente = numerodeIdentificación_cliente;
         this.id_Servicio = id_Servicio;
@@ -42,7 +41,4 @@ public class Usan_serviciosPK implements Serializable{
         this.id_Servicio = id_Servicio;
     }
 
-    
-    
-    
 }

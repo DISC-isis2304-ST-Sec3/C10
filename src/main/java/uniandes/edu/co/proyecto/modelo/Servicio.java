@@ -4,26 +4,27 @@ import java.sql.Date;
 
 public class Servicio {
 
-    private String id;
+    private int id;
     private Date Horario;
     private Integer capacidad;
     private String nombre;
 
-    public Servicio(String id, Date horario, Integer capacidad, String nombre) {
+    public Servicio(int id, Date horario, Integer capacidad, String nombre) {
         this.id = id;
         Horario = horario;
         this.capacidad = capacidad;
         this.nombre = nombre;
     }
 
-    public Servicio()
-    {;}
+    public Servicio() {
+        ;
+    }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -51,7 +52,4 @@ public class Servicio {
         this.nombre = nombre;
     }
 
-
-    
-    
 }
