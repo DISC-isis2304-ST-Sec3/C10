@@ -18,17 +18,17 @@ public interface ReservaSpaRepository extends JpaRepository<ReservaSpa, Integer>
         Collection<ReservaSpa> darReservasSpa();
 
         @Query(value = "SELECT.* FROM reservasSPA WHERE id = :id", nativeQuery = true)
-        Reserva darReservaSpa(@Param("id") int id);
+        ReservaSpa darReservaSpa(@Param("id") int id);
 
         @Modifying
         @Transactional
         @Query(value = "INSERT INTO reservasSPA (id, horario")
-        void insertarReserva(@Param("id") int id, @Param("horario") String horario);
+        void insertarReservaSpa(@Param("id") int id, @Param("horario") Date horario);
 
         @Modifying
         @Transactional
         @Query(value = "UPDATE reservasSPA SET id =:id, horario=:horario", nativeQuery = true)
-        void actualizarReserva(@Param("id") int id, @Param("horario") String horario);
+        void actualizarReservaSpa(@Param("id") int id, @Param("horario") Date horario);
 
         @Modifying
         @Transactional

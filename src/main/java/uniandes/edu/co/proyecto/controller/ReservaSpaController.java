@@ -20,7 +20,7 @@ public class ReservaSpaController {
 
     @GetMapping("/reservasSpa")
     public String reservasSpa(Model model) {
-        model.addAttribute("reservasSpa", reservaSpaRepository.darReservas());
+        model.addAttribute("reservasSpa", reservaSpaRepository.darReservasSpa());
         return "reservasSpa";
     }
 
@@ -32,35 +32,31 @@ public class ReservaSpaController {
 
     @PostMapping("/reservasSpa/new/save")
     public String reservaSpaGuardar(@ModelAttribute ReservaSpa reservaSpa) {
-        reservaSpaRepository.insertarReservaSpa(reservaSpa.getFechaEntrada(), reserva.getFechaSalida(),
-                reserva.getNumeroPersonas(), reserva.getNumeroDocumento(), reserva.getEstado(),
-                reserva.getIdEmpleado());
+        reservaSpaRepository.insertarReservaSpa(reservaSpa.getId(), reservaSpa.getHoraio());
         return "redirect:/reservas";
     }
 
     @GetMapping("/reservas/{id}/edit")
-    public String reservaEditarForm(@PathVariable("id") int id, Model model) {
-        Reserva reserva = reservaRepository.darReserva(id);
-        if (reserva != null) {
-            model.addAttribute("reserva", reserva);
-            return "reservaEditar";
+    public String reservaSpaEditarForm(@PathVariable("id") int id, Model model) {
+        ReservaSpa reservaSpa = reservaSpaRepository.darReservaSpa(id);
+        if (reservaSpa != null) {
+            model.addAttribute("reservaSpa", reservaSpa);
+            return "reservaSpaEditar";
         } else {
-            return "/redirect:/reservas";
+            return "/redirect:/reservasSpa";
         }
     }
 
-    @PostMapping("/reservas/{id}/edit/save")
-    public String reservaEditarGuardar(@ModelAttribute Reserva reserva, @PathVariable("id") int id) {
-        reservaRepository.actualizarReserva(id, reserva.getFechaEntrada(), reserva.getFechaSalida(),
-                reserva.getNumeroPersonas(), reserva.getNumeroDocumento(), reserva.getEstado(),
-                reserva.getIdEmpleado());
-        return "redirect:/reservas";
+    @PostMapping("/reservasSpa/{id}/edit/save")
+    public String reservaSpaEditarGuardar(@ModelAttribute ReservaSpa reservaSpa, @PathVariable("id") int id) {
+        reservaSpaRepository.actualizarReservaSpa(id, reservaSpa.getHoraio());
+        return "redirect:/reservasSpa";
 
     }
 
-    @GetMapping("/reservas/{id}/delete")
-    public String reservaEliminar(@PathVariable("id") int id) {
-        reservaRepository.eliminarReserva(id);
-        return "redirect:/reservas";
+    @GetMapping("/reservasSpa/{id}/delete")
+    public String reservaSpaEliminar(@PathVariable("id") int id) {
+        reservaSpaRepository.eliminarReservaSpa(id);
+        return "redirect:/reservasSpa";
     }
 }
