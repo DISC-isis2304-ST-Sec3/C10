@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3A38B69E-6152-0538-5E10-69631DB8C020" name="Relation_8">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<ordsAlias>relation_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Reserva_Clienteid" id="7779C2AD-BB6F-33D2-1BF1-4D746113FA7A">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Habitacion_Numero" id="A41CBEA0-68EE-C8A3-2E16-4098630D99F8">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0C527F6-B343-8DD1-BB89-43084BD8CF5A" referredColumn="4D0B4677-5EAA-DCA4-E53D-84E875845AEE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CBF3119F-0428-65B6-6CDE-B7B74BD5B942" name="Relation_8_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7779C2AD-BB6F-33D2-1BF1-4D746113FA7A"/>
+<colUsage columnID="A41CBEA0-68EE-C8A3-2E16-4098630D99F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAA43AEB-2CF9-7793-8F5B-24151AF56258" name="Relation_8_Reserva_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>BDA0D0D7-4753-3A41-43EB-B728D953317D</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="3D2E90E1-D3C8-0562-563C-181BEFC8675D" name="Relation_8_Habitacion_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>BDA0D0D7-4753-3A41-43EB-B728D953317D</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A41CBEA0-68EE-C8A3-2E16-4098630D99F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

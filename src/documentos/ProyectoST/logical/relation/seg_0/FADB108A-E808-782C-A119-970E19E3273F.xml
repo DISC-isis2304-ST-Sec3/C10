@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Usan_servicios" directorySegmentName="seg_0" id="FADB108A-E808-782C-A119-970E19E3273F">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:39:28 UTC</createdTime>
+<ownerDesignName>Proyecto1</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>075F17C7-7058-C674-D344-C10761A2980F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BCDB8EEE-E2C9-7C62-949E-3AD2DBE885FF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

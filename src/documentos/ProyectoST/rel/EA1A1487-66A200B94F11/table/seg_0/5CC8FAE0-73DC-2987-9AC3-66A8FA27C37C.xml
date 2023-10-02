@@ -1,0 +1,189 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5CC8FAE0-73DC-2987-9AC3-66A8FA27C37C" name="Servicio">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>075F17C7-7058-C674-D344-C10761A2980F</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre" id="CB65FD60-6665-EB6C-7223-7F274D59F585">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>DFB76F3B-575A-B5D0-275D-FEB664357656</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hotel_Nombre" id="74C64C98-6C40-11CA-07FE-0681B9B85EC9">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>CD695419-A632-5F00-9167-048C37CBCD59</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51853DD7-E1AC-AD9A-84F9-260E80CC2A74" referredColumn="983ED16A-4F21-14D9-F25E-4608C10F1EC2"/>
+</associations>
+</Column>
+<Column name="Hotel_Ciudad" id="9BB454D8-6D76-86C3-7D70-FD5B63E3941E">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>6AAD842C-C533-D925-0811-CFDBB0352479</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51853DD7-E1AC-AD9A-84F9-260E80CC2A74" referredColumn="DEF85241-5FAC-DB49-1723-7ED349308E3E"/>
+</associations>
+</Column>
+<Column name="Consumo_id_1" id="CDDDECB9-BB3A-B170-8063-46A38FEF54B7">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>9D17A000-25B9-8756-59B3-BDF4E315C115</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51698881-C14B-F805-DFC7-B49870B2BFAC" referredColumn="8637ED55-4A45-F24C-EA8B-A6004252A526"/>
+</associations>
+</Column>
+<Column name="capacidad" id="72A86C40-A98F-C7CE-064F-B78F60CDEF65">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>F3E48F89-4533-4719-D47F-A490E4DEAAB2</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Horario" id="80312229-6A51-EA19-2C28-B226C3C26B93">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>FCF13CBA-8E94-9B9E-E88A-848221267BEB</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="8F9786DA-7656-AF1F-5221-6F567A173995">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>4016ECDC-A2EE-DAE7-B20E-CC43FA4A6866</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id1" id="E78E2FEE-B84A-1E14-AFDC-045D5966A2EF">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:00:27 UTC</createdTime>
+<generatorID>64C3E2FD-70B8-433E-FBA6-B7FD44739A2C</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costo" id="5263E9A3-0DD2-81EB-CDEB-227DF6390D83">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:00:27 UTC</createdTime>
+<generatorID>16DD4ADF-18BE-403A-000B-8DF9B8987925</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefono" id="5916726A-CBDD-A909-7F23-190B9692B2C4">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:12:03 UTC</createdTime>
+<generatorID>BC726E76-EC77-AB9C-602D-141ECD74C57F</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D346D213-0A6F-8700-3926-875429DCF45B" name="Servicio_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>406A840B-7D8B-3204-F258-696236DCB4C8</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F9786DA-7656-AF1F-5221-6F567A173995"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1AB3D6F9-C5EF-0208-37FB-4E06F178600A" name="Servicio__IDX">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>87B5D1CC-B52A-4851-012A-D44096EDAF70</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="CDDDECB9-BB3A-B170-8063-46A38FEF54B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DFFE05F2-01C8-B58E-2A21-08D0595B14E4" name="Servicio_Hotel_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>88DAC33F-D1AA-BACA-5A3F-8B26C87A086A</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74C64C98-6C40-11CA-07FE-0681B9B85EC9"/>
+<colUsage columnID="9BB454D8-6D76-86C3-7D70-FD5B63E3941E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B65B1EB9-4059-6854-5D1F-5AC0396D12AB" name="Servicio_Consumo_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>87B5D1CC-B52A-4851-012A-D44096EDAF70</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDDDECB9-BB3A-B170-8063-46A38FEF54B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

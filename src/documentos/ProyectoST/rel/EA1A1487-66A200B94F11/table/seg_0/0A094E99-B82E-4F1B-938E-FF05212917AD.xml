@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A094E99-B82E-4F1B-938E-FF05212917AD" name="Tienda">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>9E913832-4694-4857-8BB7-2E78AB7DF222</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre" id="F1F1B532-933E-952F-E7F0-22ECA0043684">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>DFB76F3B-575A-B5D0-275D-FEB664357656</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B27B7729-FCB3-FEE8-8154-AC9650E4F763" referredColumn="CB65FD60-6665-EB6C-7223-7F274D59F585"/>
+</associations>
+</Column>
+<Column name="id" id="4F98BCA1-9C7D-05C3-4242-B69AA0CFECB9">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>4016ECDC-A2EE-DAE7-B20E-CC43FA4A6866</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="item" id="AAD1101E-9705-EF5D-46AE-F76B0A6AB1DC">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>4AAB7C78-4B2D-5F18-1A08-27A5822AA77D</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="96EDF611-4151-28C8-42D5-306021054256" name="Tienda_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>406A840B-7D8B-3204-F258-696236DCB4C8</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1F1B532-933E-952F-E7F0-22ECA0043684"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="55A9AB1C-0F56-7626-1079-A7DB39A74544" name="Tienda_Servicio_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>DF70F2B4-4945-A927-E057-5129683AB260</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1F1B532-933E-952F-E7F0-22ECA0043684"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

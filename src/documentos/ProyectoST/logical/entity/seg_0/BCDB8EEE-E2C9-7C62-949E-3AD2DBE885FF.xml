@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BCDB8EEE-E2C9-7C62-949E-3AD2DBE885FF" name="Cliente">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 03:04:08 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>840FA820-6BB2-E62A-E6A9-22D3545AEEC9</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<createSurrogateKey>true</createSurrogateKey>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Direccion" id="6882691A-FD58-5A1F-B58B-D0CD54C6F512">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 03:13:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="C8023924-E308-66F3-3D26-86352B861596">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 03:13:44 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="60714371-93B8-6D4B-65E3-676B70434DE2" name="Cliente PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 03:11:53 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C8023924-E308-66F3-3D26-86352B861596</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

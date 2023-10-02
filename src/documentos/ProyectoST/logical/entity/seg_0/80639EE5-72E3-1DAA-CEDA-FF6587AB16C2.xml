@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="80639EE5-72E3-1DAA-CEDA-FF6587AB16C2" name="AdministradordeDatos">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:26:14 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>840FA820-6BB2-E62A-E6A9-22D3545AEEC9</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+</Entity>

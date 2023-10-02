@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Servicio Consumo FK" directorySegmentName="seg_0" id="87B5D1CC-B52A-4851-012A-D44096EDAF70">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:09:36 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<sourcePk>EEF92DE0-C1D0-DEEC-F488-313F32BD7029</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>EA74AFE4-4469-B46E-F14D-5DD708E060EA</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>075F17C7-7058-C674-D344-C10761A2980F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

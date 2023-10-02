@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="984ECEFA-8B4D-288F-73BF-79E817752C45" name="Recepcionista">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>54848535-3C53-11D9-068B-354406D2DD14</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="A0F5912C-05C1-6653-CFBC-6297A6A26995">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>B590708E-4D47-7659-5EFB-1BA3D8812AFC</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="90B10CFC-C043-8DB6-0660-89F40BB2DE45" referredColumn="FB9B68D4-A1C7-9565-20E8-F5AE5806720E"/>
+</associations>
+</Column>
+<Column name="checkinsRealizados" id="F29B40E4-62E5-8A81-7B91-66838D86DEF5">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:31:34 UTC</createdTime>
+<generatorID>3838344E-6E4C-32E2-5DCE-B68E79203923</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A0DFF960-94F3-7064-23D7-D68F3D65480A" name="Recepcionista_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>CDA902D0-4925-DE68-A934-CFB5512925F9</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0F5912C-05C1-6653-CFBC-6297A6A26995"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7766DE0A-3D7C-7E80-ED05-EB7E48B8FEEC" name="Recepcionista_Empleado_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>F2DBA866-77AF-F2C2-0BF0-92E4B2CFB704</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0F5912C-05C1-6653-CFBC-6297A6A26995"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

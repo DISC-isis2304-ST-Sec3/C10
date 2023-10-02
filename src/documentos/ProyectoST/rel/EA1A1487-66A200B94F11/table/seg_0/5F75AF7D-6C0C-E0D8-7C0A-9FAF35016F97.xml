@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F75AF7D-6C0C-E0D8-7C0A-9FAF35016F97" name="Internet">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>7DDDF153-D972-F37B-01D9-101F9F67FCCD</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre" id="FFD27424-4FEC-CFEB-57E1-2697B0EA79E1">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>DFB76F3B-575A-B5D0-275D-FEB664357656</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29EF99F0-D2DE-C7AE-B0F2-4F5CECD3C12E" referredColumn="CB65FD60-6665-EB6C-7223-7F274D59F585"/>
+</associations>
+</Column>
+<Column name="id" id="007D98D2-F797-03A6-F65E-9E81E627091D">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>4016ECDC-A2EE-DAE7-B20E-CC43FA4A6866</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio" id="5A2546F7-2620-1531-D9D3-FF2310378AE8">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>053FD4EA-55C0-3029-B030-25149AA3DB83</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="plan" id="595B71B6-7359-2A9E-E589-D5C5445D9A9B">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:00:27 UTC</createdTime>
+<generatorID>97DB7C0E-72BF-4E7B-2B40-B0492077FF7A</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8BF2F9C3-77A5-1A66-339E-09C7766B5436" name="Internet_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>406A840B-7D8B-3204-F258-696236DCB4C8</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFD27424-4FEC-CFEB-57E1-2697B0EA79E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5FB1AAD2-EFAD-2D23-407C-D9BE95ADA6EB" name="Internet_PKv1">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:00:27 UTC</createdTime>
+<generatorID>F94D1985-6B64-287E-9383-C5F057E57CC5</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="595B71B6-7359-2A9E-E589-D5C5445D9A9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F10C6A52-54A7-4AE5-4BFE-7EF3522CD760" name="Internet_Servicio_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>6863CC9B-F21B-FE52-24A5-971994876885</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFD27424-4FEC-CFEB-57E1-2697B0EA79E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E375DEFA-062E-1923-DCFF-C69914EA02E4" name="Piscina">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>5D82A165-615D-A0A0-374C-C9C43157E9AD</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre" id="60B1517F-B977-1811-0F9F-81FB5FF2691D">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>DFB76F3B-575A-B5D0-275D-FEB664357656</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34D7730F-B903-ABA7-E325-AFA69EEB1F16" referredColumn="CB65FD60-6665-EB6C-7223-7F274D59F585"/>
+</associations>
+</Column>
+<Column name="Attribute_1" id="A9461C78-7172-CF8C-BBF1-5D9E3BFE48B2">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>29D28320-E72E-2550-BC74-CE8D83E241C0</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="CF9299C8-9122-BCCC-A1BE-E4966AA9D90A">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>4016ECDC-A2EE-DAE7-B20E-CC43FA4A6866</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="profundidad" id="2B42BA5F-ACD8-CF72-ECE6-3D1823DB278B">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>91631F76-C660-11FF-9B12-2E3D97974D9A</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9E13093-BCEB-305A-D244-2FACDF941366" name="Piscina_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>406A840B-7D8B-3204-F258-696236DCB4C8</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60B1517F-B977-1811-0F9F-81FB5FF2691D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A44A64F3-E49A-9604-38FB-6827D203505B" name="Piscina_PKv1">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>AC22C734-4CE3-FC00-E435-EEF441F93C6C</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B42BA5F-ACD8-CF72-ECE6-3D1823DB278B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39BF7977-06C8-87B6-EB5B-11CA0F4C119C" name="Piscina_Servicio_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>DE32F8FC-1617-8C9C-E580-5A7E3A2BB0A8</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60B1517F-B977-1811-0F9F-81FB5FF2691D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

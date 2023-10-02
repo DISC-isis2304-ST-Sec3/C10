@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E219F727-9B48-FF5C-A040-E23B7291682D" name="SPA">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>8F106B7A-DD9D-BBEA-B73B-2C6074137480</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre" id="E55FD09B-B483-97E6-7668-F0C2C6F46B8C">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>DFB76F3B-575A-B5D0-275D-FEB664357656</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B005A4B-8484-4F7E-9B58-190C2C204278" referredColumn="CB65FD60-6665-EB6C-7223-7F274D59F585"/>
+</associations>
+</Column>
+<Column name="id" id="C3B2E9CC-4E89-E16E-25C9-2A343585143D">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>4016ECDC-A2EE-DAE7-B20E-CC43FA4A6866</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Duracion_min" id="95708610-4734-9CAE-9C02-9CF93B3624FE">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>A3DFC88C-597D-6A40-4BC7-E1C9BED3E355</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo" id="5D3A2DB9-3A39-5C4D-CF03-04232450170E">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>B7F54522-494D-4438-569E-8F1F679CDBD7</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Costo" id="AF314CFA-EADE-5837-EF0D-5B3F09ED6C8E">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>DAA4DD85-E4EE-C5FB-770D-B0864E2E0236</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BF3EAE2E-F9EE-3516-0970-B5777D2D4FBF" name="SPA_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>406A840B-7D8B-3204-F258-696236DCB4C8</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E55FD09B-B483-97E6-7668-F0C2C6F46B8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11851245-9AFA-4016-7FAA-C5D7B955EB13" name="SPA_PKv1">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>E8AADD21-3034-1D8D-E7CE-9D19A03CF85C</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D3A2DB9-3A39-5C4D-CF03-04232450170E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E6DF1D0-574F-93A1-7814-E61F8B01494C" name="SPA_Servicio_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>9C6BCFC6-3DE6-2540-51F5-E2958296B2A7</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E55FD09B-B483-97E6-7668-F0C2C6F46B8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

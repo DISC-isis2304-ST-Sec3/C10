@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="729FE586-53DC-4E52-2763-F81A131FF917" name="Habitacion">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>FCF3B1B0-D32F-4189-A0D1-863E63E38D8E</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Numero" id="4D0B4677-5EAA-DCA4-E53D-84E875845AEE">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>D392C95B-9E57-070C-4B9F-09A158E31CFC</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo" id="8AF172BF-5170-76B1-E692-4F241A8EC886">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>C5DDD919-928C-1FA5-7C97-CDDF1E153B5C</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CapacidadMax" id="A28128A6-7470-8BB0-C290-E428E8887D8F">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>3E12984A-0F1F-40F6-0508-AA2CFAF04252</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dotacion" id="590E278B-780E-8054-2B3F-EE7C731937BA">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>1AB9409B-3D80-B028-330E-F398B79B58E7</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="22CF857F-F977-9B86-DAB9-4187E0CCDCC2">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>77666427-63E0-7C46-2FD9-FD2BD51B378F</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tarifa" id="B000EDB5-11B8-DFB2-8AEB-A18925C06F35">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>61BB9E6A-E544-28E0-B1A0-D92861375145</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PlanDeConsumo_Nombre" id="A20D7413-26C1-6BD8-F967-31CA8A919CAB">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>A4524AB1-AC5F-0C26-20CC-AE6A5F0D9406</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hotel_Nombre" id="88014256-C294-B00B-2CB6-BE2D5A297445">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>C72EEC7F-EBB0-1A13-6D7F-0469A1E5A422</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36D7EEBE-56FD-B65A-7101-8F8F3A2F8874" referredColumn="983ED16A-4F21-14D9-F25E-4608C10F1EC2"/>
+</associations>
+</Column>
+<Column name="Hotel_Ciudad" id="3718B43C-006A-8B1A-0BAA-FB71860547A2">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>AA94610B-2F03-F6AD-00C5-B9DDABC2DEDC</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36D7EEBE-56FD-B65A-7101-8F8F3A2F8874" referredColumn="DEF85241-5FAC-DB49-1723-7ED349308E3E"/>
+</associations>
+</Column>
+<Column name="PlanDeConsumo_id" id="9F19B97B-C478-0119-ED11-B2B576AC5C42">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>9F18E5D3-A632-137A-F3B9-A024A640DB38</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EF548835-CAA8-BB5B-0CD0-6E9E8EC03EEE" referredColumn="7FC0B36D-1114-45B6-8E1B-918172B2323D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EBDC6BE6-BC74-389D-F7CF-764092A3B106" name="Habitacion_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>9C877DB2-0BA0-4EB1-6ACD-09D2DCBCF4D6</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D0B4677-5EAA-DCA4-E53D-84E875845AEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ADAF7710-A4A8-10A2-731F-E22F4C46A6FB" name="Habitacion_Hotel_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>5969ED36-F054-C05E-0A45-56CA366DCB88</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88014256-C294-B00B-2CB6-BE2D5A297445"/>
+<colUsage columnID="3718B43C-006A-8B1A-0BAA-FB71860547A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="48D4084F-368A-A742-F09B-455A225B192B" name="Habitacion_PlanDeConsumo_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>D9C7D94B-6E56-3166-FB50-1920A4DA2CC6</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F19B97B-C478-0119-ED11-B2B576AC5C42"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
