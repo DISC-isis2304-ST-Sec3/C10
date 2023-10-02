@@ -9,17 +9,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="consumos")
+@Table(name = "consumos")
 public class Consumo {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Date Fecha;
     private String descripcion;
     private Integer precioUnitario;
     private Integer cantidad;
     private Integer total;
-    
+    private Integer servicioID;
+    private Integer numeroReserva;
+    private int clienteID;
+
     public Consumo(Date fecha, String descripcion, Integer precioUnitario, Integer cantidad, Integer total) {
         Fecha = fecha;
         this.descripcion = descripcion;
@@ -28,8 +31,9 @@ public class Consumo {
         this.total = total;
     }
 
-    public Consumo()
-    {;}
+    public Consumo() {
+        ;
+    }
 
     public Integer getId() {
         return id;
@@ -79,7 +83,28 @@ public class Consumo {
         this.total = total;
     }
 
-    
-    
-}
+    public Integer getServicioID() {
+        return servicioID;
+    }
 
+    public void setServicioID(Integer servicioID) {
+        this.servicioID = servicioID;
+    }
+
+    public Integer getNumeroReserva() {
+        return numeroReserva;
+    }
+
+    public void setNumeroReserva(Integer numeroReserva) {
+        this.numeroReserva = numeroReserva;
+    }
+
+    public int getClienteID() {
+        return clienteID;
+    }
+
+    public void setClienteID(int clienteID) {
+        this.clienteID = clienteID;
+    }
+
+}

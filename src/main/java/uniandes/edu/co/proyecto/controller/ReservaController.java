@@ -30,7 +30,7 @@ public class ReservaController {
 
     @PostMapping("/reservas/new/save")
     public String reservaGuardar(@ModelAttribute Reserva reserva) {
-        reservaRepository.insertarReserva(reserva.getFechaEntrada(), reserva.getFechaSalida(),
+        reservaRepository.insertarReserva(reserva.getId(), reserva.getFechaEntrada(), reserva.getFechaSalida(),
                 reserva.getNumeroPersonas(), reserva.getNumeroDocumento(), reserva.getEstado(),
                 reserva.getIdEmpleado());
         return "redirect:/reservas";
