@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,17 +21,34 @@ public class Consumo {
     private Integer precioUnitario;
     private Integer cantidad;
     private Integer total;
-    private Integer servicioID;
-    private Integer numeroReserva;
-    private int clienteID;
 
-    public Consumo(Date fecha, String descripcion, Integer precioUnitario, Integer cantidad, Integer total) {
+    @ManyToOne
+    @JoinColumn(name = "servicio_id", referencedColumnName = "id")
+    private Servicio servicioID;
+
+    @ManyToOne
+    @JoinColumn(name = "numero_Reserva",referencedColumnName = "numero")
+    private Reserva numeroReserva;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id",referencedColumnName = "id")
+    private int usuarioid;
+
+
+
+    public Consumo(Date fecha, String descripcion, Integer precioUnitario, Integer cantidad, Integer total,
+            Servicio servicioID, Reserva numeroReserva, int usuarioid) {
         Fecha = fecha;
         this.descripcion = descripcion;
         this.precioUnitario = precioUnitario;
         this.cantidad = cantidad;
         this.total = total;
+        this.servicioID = servicioID;
+        this.numeroReserva = numeroReserva;
+        this.usuarioid = usuarioid;
     }
+
+
 
     public Consumo() {
         ;
@@ -83,28 +102,30 @@ public class Consumo {
         this.total = total;
     }
 
-    public Integer getServicioID() {
-        return servicioID;
-    }
+    
 
-    public void setServicioID(Integer servicioID) {
+public void setServicioID(Servicio servicioID) {
         this.servicioID = servicioID;
     }
 
-    public Integer getNumeroReserva() {
-        return numeroReserva;
-    }
 
-    public void setNumeroReserva(Integer numeroReserva) {
+
+    public void setNumeroReserva(Reserva numeroReserva) {
         this.numeroReserva = numeroReserva;
     }
 
-    public int getClienteID() {
-        return clienteID;
+
+
+    public int getUsuarioid() {
+        return usuarioid;
     }
 
-    public void setClienteID(int clienteID) {
-        this.clienteID = clienteID;
+
+
+    public void setUsuarioid(int usuarioid) {
+        this.usuarioid = usuarioid;
     }
 
-}
+
+
+  }
