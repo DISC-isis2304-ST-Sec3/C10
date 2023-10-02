@@ -8,33 +8,34 @@ public class PlanDeConsumo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private Integer Descuento;
+    private int id;
+    private int Descuento;
     private String descripcion;
     private String Nombre;
-    
-    public PlanDeConsumo(Integer descuento, String descripcion, String nombre) {
+
+    public PlanDeConsumo(int descuento, String descripcion, String nombre) {
         Descuento = descuento;
         this.descripcion = descripcion;
         Nombre = nombre;
     }
 
-    public PlanDeConsumo()
-    {;}
+    public PlanDeConsumo() {
+        ;
+    }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Integer getDescuento() {
+    public int getDescuento() {
         return Descuento;
     }
 
-    public void setDescuento(Integer descuento) {
+    public void setDescuento(int descuento) {
         Descuento = descuento;
     }
 
@@ -54,14 +55,4 @@ public class PlanDeConsumo {
         Nombre = nombre;
     }
 
-    
-
-    
-
-    
-
-
-
-
-    
 }
