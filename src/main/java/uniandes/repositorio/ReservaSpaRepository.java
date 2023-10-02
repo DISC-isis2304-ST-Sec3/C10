@@ -19,7 +19,7 @@ public interface ReservaSpaRepository extends JpaRepository<ReservaSpa, Integer>
     Collection<ReservaSpa> darReservas();
 
     @Query(value= "SELECT.* FROM reservasSPA WHERE id = :id",nativeQuery = true)
-    Reserva darReserva(@Param("id") int id);
+    ReservaSpa darReserva(@Param("id") int id);
 
     @Modifying
     @Transactional

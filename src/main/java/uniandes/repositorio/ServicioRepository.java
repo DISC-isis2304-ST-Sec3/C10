@@ -18,7 +18,7 @@ public interface ServicioRepository extends JpaRepository<Servicio,Integer> {
     Collection<Servicio> darServicios();
 
     @Query(value= "SELECT.* FROM servicios WHERE id = :id",nativeQuery = true)
-    Reserva darServisio(@Param("id") int id);
+    Servicio darServisio(@Param("id") int id);
 
     @Modifying
     @Transactional

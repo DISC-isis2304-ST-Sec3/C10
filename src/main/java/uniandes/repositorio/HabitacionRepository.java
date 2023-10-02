@@ -18,7 +18,7 @@ public interface HabitacionRepository extends JpaRepository<Habitacion,Integer> 
     Collection<Reserva> darHabitaciones();
 
     @Query(value= "SELECT.* FROM habitaciones WHERE Numero = :Numero",nativeQuery = true)
-    Reserva darReserva(@Param("Numero") int Numero);
+    Habitacion darReserva(@Param("Numero") int Numero);
 
     @Modifying
     @Transactional
