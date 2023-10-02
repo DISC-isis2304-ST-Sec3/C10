@@ -32,7 +32,7 @@ public class Cliente extends Usuario {
         Direccion = direccion;
     }
 
-    public int getTelefono() {
+    public Integer getTelefono() {
         return Telefono;
     }
 
