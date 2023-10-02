@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1BDF3D2C-4ECE-32F7-F39C-0C05F152CC6D" name="PlanDeConsumo">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:25:47 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nombre" id="55328203-BA84-9664-0672-31AAAD00C4EF">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:24:15 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="9AFC229B-B28E-1B4A-D08A-BAAF8ABCA910">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:24:28 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Descuento" id="17CC5C4C-D1FE-8BBD-DAE9-3B0B043B4F9F">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:24:43 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hotel Nombre" id="01DAD707-B9DA-4641-F02C-BF197FC6959E">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:25:59 UTC</createdTime>
+<generatorID>914AACB3-0322-871D-7242-26D87F23E5E4</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>139DAE19-1A94-69B1-5431-10BB1C410F4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hotel Ciudad" id="F94D2E40-0E06-BA48-0663-53C36A1BABCA">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:25:59 UTC</createdTime>
+<generatorID>914AACB3-0322-871D-7242-26D87F23E5E4</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>DFCE3649-447B-DFE9-6D57-DFA92590F952</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="001708AC-61DF-FF0D-1202-A4BE34D74C46">
+<createdBy>Samuel Ramírez</createdBy>
+<createdTime>2023-10-01 01:17:03 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="1F475F76-1113-CF34-2BF5-52C222C2F6D6">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:11:23 UTC</createdTime>
+<generatorID>C202144C-06D0-BC71-BBA1-F7079A930734</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>C8023924-E308-66F3-3D26-86352B861596</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E28CA474-D557-874A-4477-C6A05C4F7735" name="PlanDeConsumo PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:24:27 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>001708AC-61DF-FF0D-1202-A4BE34D74C46</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

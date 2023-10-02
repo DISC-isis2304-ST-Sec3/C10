@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Consumo Reserva FK" directorySegmentName="seg_0" id="BF72A85C-4E8C-F659-1A65-B0892CC81482">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:42:02 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<sourcePk>3ADA5DB8-6629-FD4A-8D99-C9B6933E6C44</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>53ABF5BE-E765-54BC-898C-8AC513BC6636</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EA74AFE4-4469-B46E-F14D-5DD708E060EA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

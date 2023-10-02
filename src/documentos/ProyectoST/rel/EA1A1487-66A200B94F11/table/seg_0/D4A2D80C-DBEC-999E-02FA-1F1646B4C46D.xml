@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D4A2D80C-DBEC-999E-02FA-1F1646B4C46D" name="Usan_servicios">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Servicio_nombre" id="798E6279-6937-3AE4-08C5-8A491EBC7EA6">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="502D7FAF-ACBB-5826-8B9F-1CD577CE1D52" referredColumn="CB65FD60-6665-EB6C-7223-7F274D59F585"/>
+</associations>
+</Column>
+<Column name="Cliente_NumerodeIdentificacion" id="A4431428-AB80-63E3-0EFA-A0AB43F52B4B">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F1DAEE8A-6DA1-9477-DC87-0148CCD40AE5" referredColumn="3672DC79-C9AA-513B-8D87-315E35CC5E72"/>
+</associations>
+</Column>
+<Column name="Cliente_Id" id="13E17D73-79A1-C464-F90C-5C7DD682F2AF">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3C29BA73-092C-1937-6FCB-3FDDBC40F0CF" referredColumn="B51756D8-39B7-4DCA-2D62-28ED1701E803"/>
+</associations>
+</Column>
+<Column name="Servicio_id" id="861722C0-A8C5-2027-67CA-D8DB7FB7BA33">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="502D7FAF-ACBB-5826-8B9F-1CD577CE1D52" referredColumn="8F9786DA-7656-AF1F-5221-6F567A173995"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F3ABEF97-5216-8DE4-D24D-341B02A177C5" name="Relation_6_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="798E6279-6937-3AE4-08C5-8A491EBC7EA6"/>
+<colUsage columnID="A4431428-AB80-63E3-0EFA-A0AB43F52B4B"/>
+<colUsage columnID="13E17D73-79A1-C464-F90C-5C7DD682F2AF"/>
+<colUsage columnID="861722C0-A8C5-2027-67CA-D8DB7FB7BA33"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5A7698E-39AE-E93D-F21A-4F764FE3B368" name="Relation_6_Servicio_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>FADB108A-E808-782C-A119-970E19E3273F</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="861722C0-A8C5-2027-67CA-D8DB7FB7BA33"/>
+<colUsage columnID="798E6279-6937-3AE4-08C5-8A491EBC7EA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B397031C-8701-217D-D834-3768C727AC21" name="Relation_6_Cliente_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>FADB108A-E808-782C-A119-970E19E3273F</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4431428-AB80-63E3-0EFA-A0AB43F52B4B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="81EBEF29-A1F4-2441-8ADD-FFAA1DD00C44" name="Relation_6_Cliente_FKv1">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 16:21:22 UTC</createdTime>
+<generatorID>FADB108A-E808-782C-A119-970E19E3273F</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13E17D73-79A1-C464-F90C-5C7DD682F2AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

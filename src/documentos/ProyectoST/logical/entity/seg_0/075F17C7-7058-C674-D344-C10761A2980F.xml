@@ -1,0 +1,168 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="075F17C7-7058-C674-D344-C10761A2980F" name="Servicio">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:25:42 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nombre" id="DFB76F3B-575A-B5D0-275D-FEB664357656">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:22:45 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hotel Nombre" id="CD695419-A632-5F00-9167-048C37CBCD59">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:25:59 UTC</createdTime>
+<generatorID>88DAC33F-D1AA-BACA-5A3F-8B26C87A086A</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>139DAE19-1A94-69B1-5431-10BB1C410F4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hotel Ciudad" id="6AAD842C-C533-D925-0811-CFDBB0352479">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:25:59 UTC</createdTime>
+<generatorID>88DAC33F-D1AA-BACA-5A3F-8B26C87A086A</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>DFCE3649-447B-DFE9-6D57-DFA92590F952</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Consumo id 1" id="9D17A000-25B9-8756-59B3-BDF4E315C115">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:58:54 UTC</createdTime>
+<generatorID>87B5D1CC-B52A-4851-012A-D44096EDAF70</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>B1CDE1A6-DF57-8B2C-D4FD-F2256DBFCB54</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="capacidad" id="F3E48F89-4533-4719-D47F-A490E4DEAAB2">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:17:40 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Horario" id="FCF13CBA-8E94-9B9E-E88A-848221267BEB">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:17:49 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="4016ECDC-A2EE-DAE7-B20E-CC43FA4A6866">
+<createdBy>Samuel Ramírez</createdBy>
+<createdTime>2023-10-01 03:03:45 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="64C3E2FD-70B8-433E-FBA6-B7FD44739A2C">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 18:39:14 UTC</createdTime>
+<generatorID>87B5D1CC-B52A-4851-012A-D44096EDAF70</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>D21C8F67-4696-4180-D91C-41CEECE4655E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="costo" id="16DD4ADF-18BE-403A-000B-8DF9B8987925">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 22:49:49 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="BC726E76-EC77-AB9C-602D-141ECD74C57F">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:11:23 UTC</createdTime>
+<generatorID>87B5D1CC-B52A-4851-012A-D44096EDAF70</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<referedAttribute>D1ED2493-C5E0-F576-B6C5-2DB48C1B215F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="406A840B-7D8B-3204-F258-696236DCB4C8" name="Servicio PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 14:22:50 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4016ECDC-A2EE-DAE7-B20E-CC43FA4A6866</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

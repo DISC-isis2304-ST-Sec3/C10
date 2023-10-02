@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="datossubidos" directorySegmentName="seg_0" id="3FBECA71-D176-ECDB-01F8-FAB40214497D">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:41:49 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<sourcePk>CDA902D0-4925-DE68-A934-CFB5512925F9</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>80639EE5-72E3-1DAA-CEDA-FF6587AB16C2</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>64AF5188-4FE2-9DD9-2F1E-A0F0A683533A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

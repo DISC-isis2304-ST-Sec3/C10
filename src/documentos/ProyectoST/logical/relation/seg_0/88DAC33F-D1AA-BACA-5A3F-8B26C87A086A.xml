@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Servicio Hotel FK" directorySegmentName="seg_0" id="88DAC33F-D1AA-BACA-5A3F-8B26C87A086A">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 13:35:54 UTC</createdTime>
+<ownerDesignName>Proyecto1</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<sourcePk>76FDCBFF-4202-B89F-A65E-0BF0E39AF2B1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>64AF5188-4FE2-9DD9-2F1E-A0F0A683533A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>075F17C7-7058-C674-D344-C10761A2980F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

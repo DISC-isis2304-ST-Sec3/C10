@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB7B6569-BFB1-995B-DC09-21F8A07494F9" name="AdministradordeDatos">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>80639EE5-72E3-1DAA-CEDA-FF6587AB16C2</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="F0B0660F-CEBA-35F0-3342-27033D59103B">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>B590708E-4D47-7659-5EFB-1BA3D8812AFC</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CE6AF03D-A2FE-7C92-0683-C27AFE5E16E2" referredColumn="FB9B68D4-A1C7-9565-20E8-F5AE5806720E"/>
+</associations>
+</Column>
+<Column name="datosSubidos" id="FD62380E-1C2A-C73E-EAE2-F8B9639A652C">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 17:31:34 UTC</createdTime>
+<generatorID>892A20F1-5958-81F2-F81E-FC2F31BDB9E9</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B8C5C733-55E6-73DF-A053-9A57459F2261" name="AdministradordeDatos_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>CDA902D0-4925-DE68-A934-CFB5512925F9</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0B0660F-CEBA-35F0-3342-27033D59103B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B2682E7A-17D9-6D80-DC94-21C71378586D" name="AdministradordeDatos_Empleado_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>BBF8039C-4865-8DA1-32F8-BF66CDBED5C4</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0B0660F-CEBA-35F0-3342-27033D59103B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3659FD40-5ECF-D083-1534-E9AFAB356961" name="Gerente">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>DD2F3E90-BEC7-11C4-3348-6CEC46DBBF00</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="8231B829-3B58-BC1B-9EE6-2D61C0FC715D">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>B590708E-4D47-7659-5EFB-1BA3D8812AFC</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4AFFCD36-FAC5-AB6F-2CDB-0CF4B306587A" referredColumn="FB9B68D4-A1C7-9565-20E8-F5AE5806720E"/>
+</associations>
+</Column>
+<Column name="Hotel_Nombre" id="75D60E79-76FA-6DAF-BAA1-9C553FCE8FAC">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:00:27 UTC</createdTime>
+<generatorID>A82F06A3-0068-D96F-D17E-1FC3B82D866E</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1BCC87F1-7B6F-1945-945E-DAF545C748E5" referredColumn="983ED16A-4F21-14D9-F25E-4608C10F1EC2"/>
+</associations>
+</Column>
+<Column name="Hotel_Ciudad" id="D1F27EDB-3AD9-7678-76AE-50F085188B76">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:00:27 UTC</createdTime>
+<generatorID>1A7CC878-54C5-7394-EBC0-7AC5E132AB0F</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1BCC87F1-7B6F-1945-945E-DAF545C748E5" referredColumn="DEF85241-5FAC-DB49-1723-7ED349308E3E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="161C51A9-E079-6656-6AA9-CE2F250A0E4F" name="Gerente_PK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>CDA902D0-4925-DE68-A934-CFB5512925F9</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8231B829-3B58-BC1B-9EE6-2D61C0FC715D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A467FAB-E622-6F38-FC5A-3DD2F45D98A7" name="Gerente__IDX">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-01 23:00:27 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>33765188-C954-C437-0EE3-42ECA39F2A0F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="75D60E79-76FA-6DAF-BAA1-9C553FCE8FAC"/>
+<colUsage columnID="D1F27EDB-3AD9-7678-76AE-50F085188B76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0564A828-6A89-5664-8189-0B1981AF1A73" name="Gerente_Empleado_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:33:16 UTC</createdTime>
+<generatorID>E17A941A-585D-36E3-CA5A-A1DB5D1B6499</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8231B829-3B58-BC1B-9EE6-2D61C0FC715D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46536C5A-27DA-A4E9-84D3-38931932585C" name="Gerente_Hotel_FK">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-10-02 01:53:26 UTC</createdTime>
+<generatorID>33765188-C954-C437-0EE3-42ECA39F2A0F</generatorID>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75D60E79-76FA-6DAF-BAA1-9C553FCE8FAC"/>
+<colUsage columnID="D1F27EDB-3AD9-7678-76AE-50F085188B76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

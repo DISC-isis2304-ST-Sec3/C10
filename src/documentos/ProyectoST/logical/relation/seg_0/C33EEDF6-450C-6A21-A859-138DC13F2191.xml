@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ReservaSPA Cliente FK" directorySegmentName="seg_0" id="C33EEDF6-450C-6A21-A859-138DC13F2191">
+<createdBy>juanamejia</createdBy>
+<createdTime>2023-09-27 15:22:55 UTC</createdTime>
+<ownerDesignName>ProyectoST</ownerDesignName>
+<engineerTo>
+<item key="EA1A1487-3BE1-51F6-0395-66A200B94F11" value="true"/>
+</engineerTo>
+<sourcePk>60714371-93B8-6D4B-65E3-676B70434DE2</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BCDB8EEE-E2C9-7C62-949E-3AD2DBE885FF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>005EA749-D619-9A6A-F13D-04743FE90D8A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
