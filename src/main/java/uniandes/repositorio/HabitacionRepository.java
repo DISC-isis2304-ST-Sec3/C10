@@ -15,15 +15,10 @@ import uniandes.edu.co.proyecto.modelo.Reserva;
 public interface HabitacionRepository extends JpaRepository<Habitacion, Integer> {
 
         @Query(value = "SELECT.* FROM habitaciones", nativeQuery = true)
-        Collection<Reserva> darHabitaciones();
+        Collection<Habitacion> darHabitaciones();
 
-<<<<<<< HEAD
         @Query(value = "SELECT.* FROM habitaciones WHERE Numero = :Numero", nativeQuery = true)
         Habitacion darHabitacion(@Param("Numero") int Numero);
-=======
-    @Query(value= "SELECT.* FROM habitaciones WHERE Numero = :Numero",nativeQuery = true)
-    Habitacion darReserva(@Param("Numero") int Numero);
->>>>>>> b8d1163c352766003f31fc82a5a6f04408914ca4
 
         @Modifying
         @Transactional
