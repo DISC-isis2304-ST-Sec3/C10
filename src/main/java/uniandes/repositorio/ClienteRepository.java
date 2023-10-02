@@ -22,7 +22,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO clientes (Nombre_2,Apellido,Tipo,Direccion,Telefono,Plandeconsumoactual) VALUES(hotel_sequence.nextval, :Nombre_2, :Apellido, :Tipo, :Direccion, :Telefono, :Plandeconsumoactual )")
+        @Query(value = "INSERT INTO clientes (id,Nombre_2,Apellido,Tipo,Direccion,Telefono,Plandeconsumoactual) VALUES(hotel_sequence.nextval,:id, :Nombre_2, :Apellido, :Tipo, :Direccion, :Telefono, :Plandeconsumoactual )")
         void insertarCliente(@Param("id") int id, @Param("Nombre_2") String Nombre_2,
                         @Param("Apellido") String Apellido,
                         @Param("Tipo") String Tipo, @Param("Direccion") String Direccion,
