@@ -6,9 +6,12 @@ public class Habitacion {
     private Integer CapacidadMax;
     private String Dotacion;
     private Integer Tarifa;
+    private String estado;
+    public int planDeConsumo;
 
-    public Habitacion()
-    {;} 
+    public Habitacion() {
+        ;
+    }
 
     public Habitacion(Integer numero, String tipo, Integer capacidadMax, String dotacion, Integer tarifa) {
         Numero = numero;
@@ -58,7 +61,20 @@ public class Habitacion {
         Tarifa = tarifa;
     }
 
+    public String getEstado() {
+        return estado;
+    }
 
-    
-    
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public int getPlanDeConsumo() {
+        return planDeConsumo;
+    }
+
+    public void setPlanDeConsumo(int planDeConsumo) {
+        this.planDeConsumo = planDeConsumo;
+    }
+
 }
