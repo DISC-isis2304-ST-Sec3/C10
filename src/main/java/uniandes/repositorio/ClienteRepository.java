@@ -38,9 +38,9 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
                         @Param("Telefono") int Telefono,
                         @Param("Plandeconsumoactual") String Plandeconsumoactual);
 
-        @Modifying
-        @Transactional
-        @Query(value = "DELETE FROM clientes WHERE id=.id", nativeQuery = true)
-        void eliminarCliente(@Param("id") int id);
+    @Modifying
+    @Transactional
+    @Query(value = "DELETE FROM clientes WHERE id=:id", nativeQuery = true)
+    void eliminarCliente(@Param("id") int id);
 
 }
