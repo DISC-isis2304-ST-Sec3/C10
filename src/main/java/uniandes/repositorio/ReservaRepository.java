@@ -33,7 +33,6 @@ public interface ReservaRepository extends JpaRepository <Reserva, Integer> {
     void actualizarReserva(@Param("id") int id, @Param("fechaEntrada") Date fechaentrada, @Param("FechaSalida") Date fechasalida, 
     @Param("NumeroPersonas") Integer numeropersonas,@Param("Cliente_NumerodeIdentificacion") Integer numerodocumento
     ,@Param("Estado") String estado, @Param("Empleado_id") Integer id_empleado);
-
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM reservas WHERE id=:id",nativeQuery = true)

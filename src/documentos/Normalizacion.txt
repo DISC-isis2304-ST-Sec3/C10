@@ -1,0 +1,4 @@
+Nivel de Normalización: 
+Para encontrar la forma normal del modelo se analizó y se  evalua en primer lugar la primera forma normal. Debido a que el modelo no tiene atributos multivalor, este se puede considerar en 1FN
+Luego se analizó 2FN para buscar que no existieran dependencias parciales desde los atributos primos.  No se lograron encontrar dependencias parciales en el modelo por lo que se puede decir que se encuentra en 2FN 
+Finalmente se analizo si se encontraba en 3FN y se pudo concluir que no se cumplía con esta forma normal. Esto se debe a que se encontraron dependencias transitivas. Por ejemplo entre hotel-> usuario y usuario ->administrador de datos
