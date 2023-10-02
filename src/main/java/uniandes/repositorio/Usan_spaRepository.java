@@ -21,13 +21,13 @@ public interface Usan_spaRepository extends JpaRepository<Usan_spa,Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO Usan_SPA (id_SPA,id_ReservaSPA) VALUES(hotel_sequence.nextval, :id_SPA,id_ReservaSPA )")
-    void insertarUsan_spa(@Param("id_SPA") int id_SPA, @Param("id_ReservaSPA") String id_ReservaSPA);
+    @Query(value = "INSERT INTO Usan_SPA (id_SPA,id_ReservaSPA) VALUES(hotel_sequence.nextval, :id_SPA,:id_ReservaSPA )")
+    void insertarUsan_spa(@Param("id_SPA") int id_SPA, @Param("id_ReservaSPA") int id_ReservaSPA);
 
      @Modifying
     @Transactional
-    @Query(value = "UPDATE INTO Usan_SPA (id_SPA,id_ReservaSPA) VALUES(hotel_sequence.nextval, :id_SPA,id_ReservaSPA )")
-    void actualizarUsan_spa(@Param("id_SPA") int id_SPA, @Param("id_ReservaSPA") String id_ReservaSPA);
+    @Query(value = "UPDATE INTO Usan_SPA (id_SPA,id_ReservaSPA) VALUES(hotel_sequence.nextval, :id_SPA,:id_ReservaSPA )")
+    void actualizarUsan_spa(@Param("id_SPA") int id_SPA, @Param("id_ReservaSPA") int id_ReservaSPA);
 
     @Modifying
     @Transactional
