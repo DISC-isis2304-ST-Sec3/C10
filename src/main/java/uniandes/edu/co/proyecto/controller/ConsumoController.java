@@ -34,7 +34,8 @@ public class ConsumoController {
 
     @PostMapping("/consumos/new/save")
     public String consumoGuardar(@ModelAttribute Consumo consumo) {
-        consumoRepository.insertarConsumo(consumo.getFecha(), consumo.getDescripcion(), consumo.getPrecioUnitario(),
+        consumoRepository.insertarConsumo(consumo.getId(), consumo.getFecha(), consumo.getDescripcion(),
+                consumo.getPrecioUnitario(),
                 consumo.getCantidad(), consumo.getTotal(), consumo.getServicioID(), consumo.getNumeroReserva(),
                 consumo.getUsuarioid());
         return "redirect:/consumos";
@@ -53,7 +54,8 @@ public class ConsumoController {
 
     @PostMapping("/consumos/{id}/edit/save")
     public String consumoEditarGuardar(@ModelAttribute Consumo consumo, @PathVariable("id") int id) {
-        consumoRepository.actualizarConsumo(consumo.getFecha(), consumo.getDescripcion(), consumo.getPrecioUnitario(),
+        consumoRepository.actualizarConsumo(consumo.getId(), consumo.getFecha(), consumo.getDescripcion(),
+                consumo.getPrecioUnitario(),
                 consumo.getCantidad(), consumo.getTotal(), consumo.getServicioID(), consumo.getNumeroReserva(),
                 consumo.getUsuarioid());
         return "redirect:/consumos";
