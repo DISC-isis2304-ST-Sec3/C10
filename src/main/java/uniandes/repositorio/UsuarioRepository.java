@@ -8,14 +8,15 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Cliente;
+import uniandes.edu.co.proyecto.modelo.Usuario;
 
 public interface UsuarioRepository {
 
      @Query(value = "SELECT.* FROM usuarios", nativeQuery = true)
-    Collection<Cliente> darClientes();
+    Collection<Usuario> darClientes();
 
     @Query(value = "SELECT.* FROM usuarios WHERE id = :id", nativeQuery = true)
-    Cliente darCliente(@Param("id") int id);
+    Usuario darCliente(@Param("id") int id);
 
     @Modifying
     @Transactional
@@ -25,7 +26,7 @@ public interface UsuarioRepository {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE usuarios SET Nombre_2 =:Nombre_2, Apellido=:Apelliod, Tipo=:Tipo, Direccion=:Direccion, Telefono=:Telefono, Plandeconsumoactual=:Plandeconsumoactual WHERE id =:id", nativeQuery = true)
+    @Query(value = "UPDATE usuarios SET Nombre_2 =:Nombre_2, Apellido=:Apelliod, Tipo=:Tipo WHERE id =:id", nativeQuery = true)
     void actualizarCliente(@Param("Nombre_2") String Nombre_2, @Param("Apellido") String Apellido,
             @Param("Tipo") String Tipo);
 
