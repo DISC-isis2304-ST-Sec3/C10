@@ -23,10 +23,10 @@ public interface ReservaSpaRepository extends JpaRepository<ReservaSpa, Integer>
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO reservasSPA (fechaEntrada,FechaSalida,NumeroPersonas,Cliente_NumerodeIdentificacion,Estado,Empleado_id) VALUES(hotel_sequence.nextval, :fechaEntrada, :FechaSalida, :NumeroPersonas, :Cliente_NumerodeIdentificacion, :Estado, :Empleado_id )")
+    @Query(value = "INSERT INTO reservasSPA (fechaEntrada,FechaSalida,NumeroPersonas,Cliente_NumerodeIdentificacion,Estado,Empleado_id,Habitacion_numero) VALUES(hotel_sequence.nextval, :fechaEntrada, :FechaSalida, :NumeroPersonas, :Cliente_NumerodeIdentificacion, :Estado, :Empleado_id, :Habitacion_numero )")
     void insertarReserva(@Param("fechaEntrada") Date fechaentrada, @Param("FechaSalida") Date fechasalida, 
     @Param("NumeroPersonas") Integer numeropersonas,@Param("Cliente_NumerodeIdentificacion") Integer numerodocumento
-    ,@Param("Estado") String estado,@Param("Empleado_id") Integer id_empleado  );
+    ,@Param("Estado") String estado,@Param("Empleado_id") Integer id_empleado, @Param("Habitacion_numero") int Habitacion_numero  );
 
 
     @Modifying
@@ -34,7 +34,7 @@ public interface ReservaSpaRepository extends JpaRepository<ReservaSpa, Integer>
     @Query(value = "UPDATE reservasSPA SET fechaEntrada =:fechaEntrada, FechaSalida=:FechaSalida, NumeroPersonas=:NumeroPersonas, Cliente_NumeroIdentificacion=:Cliente_NumerodeIdentificacion, Estado=:Estado, Empleado_id=:Empleado_id WHERE id =:id", nativeQuery = true)
     void actualizarReserva(@Param("id") int id, @Param("fechaEntrada") Date fechaentrada, @Param("FechaSalida") Date fechasalida, 
     @Param("NumeroPersonas") Integer numeropersonas,@Param("Cliente_NumerodeIdentificacion") Integer numerodocumento
-    ,@Param("Estado") String estado, @Param("Empleado_id") Integer id_empleado);
+    ,@Param("Estado") String estado, @Param("Empleado_id") Integer id_empleado, @Param("Habitacion_numero") int Habitacion_numero );
 
     @Modifying
     @Transactional
