@@ -7,29 +7,16 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Reservan_habitaciones")
 public class ReservanHabitaciones {
-    public int numReserva;
-    public int numHabitacion;
     @EmbeddedId
     private ReservanHabitacionesPK pk;
 
+    public ReservanHabitaciones(Reserva Numero_reserva,Habitacion Numero_habitacion)
+    {
+        this.pk=new ReservanHabitacionesPK(Numero_reserva, Numero_habitacion);
+    }
+
     public ReservanHabitaciones() {
         ;
-    }
-
-    public int getNumReserva() {
-        return numReserva;
-    }
-
-    public void setNumReserva(int numReserva) {
-        this.numReserva = numReserva;
-    }
-
-    public int getNumHabitacion() {
-        return numHabitacion;
-    }
-
-    public void setNumHabitacion(int numHabitacion) {
-        this.numHabitacion = numHabitacion;
     }
 
     public ReservanHabitacionesPK getPk() {
@@ -40,4 +27,7 @@ public class ReservanHabitaciones {
         this.pk = pk;
     }
 
+    
+
+    
 }

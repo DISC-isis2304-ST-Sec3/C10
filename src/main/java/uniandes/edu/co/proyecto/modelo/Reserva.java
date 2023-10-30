@@ -80,7 +80,7 @@ public class Reserva {
         this.id = id;
     }
 
-    public int getNumeroDocumento() {
+    public Cliente getNumeroDocumento() {
         return numeroDocumento;
     }
 
@@ -88,7 +88,7 @@ public class Reserva {
         return idEmpleado;
     }
 
-    public void setNumeroDocumento(int pNumeroDocumento) {
+    public void setNumeroDocumento(Cliente pNumeroDocumento) {
         numeroDocumento = pNumeroDocumento;
     }
 

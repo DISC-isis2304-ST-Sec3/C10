@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import uniandes.edu.co.proyecto.modelo.Habitacion;
+import uniandes.edu.co.proyecto.modelo.Reserva;
 import uniandes.edu.co.proyecto.modelo.ReservanHabitaciones;
 import uniandes.edu.co.proyecto.modelo.UsanSpa;
 
@@ -17,8 +19,8 @@ public interface ReservanHabitacionesRepository extends JpaRepository<ReservanHa
         Collection<UsanSpa> darReservanHabitacioness();
 
         @Query(value = "SELECT * FROM Reservan_habitaciones WHERE Numero_reserva = :Numero_reserva AND Numero_habitacion = :Numero_habitacion", nativeQuery = true)
-        UsanSpa darReservan_habitaciones(@Param("Numero_reserva") int numReserva,
-                        @Param("Numero_habitacion") int Num_habitacion);
+        UsanSpa darReservan_habitaciones(@Param("Numero_reserva") Integer numReserva,
+                        @Param("Numero_habitacion") Integer Num_habitacion);
 
         @Modifying
         @Transactional

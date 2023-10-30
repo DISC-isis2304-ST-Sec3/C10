@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.Reserva;
 
 public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
@@ -25,7 +26,7 @@ public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
         void insertarReserva(@Param("id") int id, @Param("fechaEntrada") Date fechaentrada,
                         @Param("FechaSalida") Date fechasalida,
                         @Param("NumeroPersonas") Integer numeropersonas,
-                        @Param("Cliente_NumerodeIdentificacion") Integer numerodocumento,
+                        @Param("Cliente_NumerodeIdentificacion") Cliente numerodocumento,
                         @Param("Estado") String estado,
                         @Param("Empleado_id") Integer id_empleado);
 
@@ -35,7 +36,7 @@ public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
         void actualizarReserva(@Param("id") int id, @Param("fechaEntrada") Date fechaentrada,
                         @Param("FechaSalida") Date fechasalida,
                         @Param("NumeroPersonas") Integer numeropersonas,
-                        @Param("Cliente_NumerodeIdentificacion") Integer numerodocumento,
+                        @Param("Cliente_NumerodeIdentificacion") Cliente numerodocumento,
                         @Param("Estado") String estado,
                         @Param("Empleado_id") Integer id_empleado);
 

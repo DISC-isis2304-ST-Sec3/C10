@@ -7,8 +7,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Usan_spa")
 public class UsanSpa {
-    public int id;
-    public int idReservasSpa;
     @EmbeddedId
     private Usan_spaPK pk;
 
@@ -16,20 +14,20 @@ public class UsanSpa {
         ;
     }
 
-    public int getId() {
-        return id;
+    public UsanSpa(SPA id_Spa, ReservaSpa id_Reserva){
+         this.pk = new Usan_spaPK(id_Spa, id_Reserva);
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public Usan_spaPK getPk() {
+        return pk;
     }
 
-    public int getIdReservasSpa() {
-        return idReservasSpa;
+    public void setPk(Usan_spaPK pk) {
+        this.pk = pk;
     }
 
-    public void setIdReservasSpa(int idReservasSpa) {
-        this.idReservasSpa = idReservasSpa;
-    }
+    
+
+
 
 }

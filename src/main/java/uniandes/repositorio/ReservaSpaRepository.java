@@ -22,13 +22,15 @@ public interface ReservaSpaRepository extends JpaRepository<ReservaSpa, Integer>
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO reservasSPA (id, horario")
-        void insertarReservaSpa(@Param("id") int id, @Param("horario") Date horario);
+        @Query(value = "INSERT INTO reservasSPA (id, horario, numerohabitacion, numerodocumento)")
+        void insertarReservaSpa(@Param("id") int id, @Param("horario") Date horario, @Param("numerohabitacion") Integer numerohabitacion,
+        @Param("numerodocumento") Integer numerodocumento);
 
         @Modifying
         @Transactional
         @Query(value = "UPDATE reservasSPA SET id =:id, horario=:horario", nativeQuery = true)
-        void actualizarReservaSpa(@Param("id") int id, @Param("horario") Date horario);
+        void actualizarReservaSpa(@Param("id") int id, @Param("horario") Date horario,@Param("numerohabitacion") Integer numerohabitacion,
+        @Param("numerodocumento") Integer numerodocumento);
 
         @Modifying
         @Transactional

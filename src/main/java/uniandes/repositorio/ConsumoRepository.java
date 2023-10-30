@@ -11,6 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Consumo;
 import uniandes.edu.co.proyecto.modelo.Reserva;
+import uniandes.edu.co.proyecto.modelo.Servicio;
+import uniandes.edu.co.proyecto.modelo.Usuario;
 
 public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
@@ -26,7 +28,7 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
         void insertarConsumo(@Param("id") int id,@Param("Fecha") Date fechaentrada, @Param("descripcion") String descripcion,
                         @Param("PrecioUnitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
                         @Param("total") Integer total, @Param("servicio_id") Integer servicio_id,
-                        @Param("numero_reserva") Integer numero_reserva, @Param("Usuario_id") int Usuario_id);
+                        @Param("numero_reserva") Integer numero_reserva, @Param("Usuario_id") Integer Usuario_id);
 
         @Modifying
         @Transactional
@@ -34,7 +36,7 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
         void actualizarConsumo(@Param("id") int id, @Param("Fecha") Date fechaentrada, @Param("descripcion") String descripcion,
                         @Param("PrecioUnitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
                         @Param("total") Integer total, @Param("servicio_id") Integer servicio_id,
-                        @Param("numero_reserva") Integer numero_reserva, @Param("Usuario_id") int Usuario_id);
+                        @Param("numero_reserva") Integer numero_reserva, @Param("Usuario_id") Integer Usuario_id);
 
         @Modifying
         @Transactional

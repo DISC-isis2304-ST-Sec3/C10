@@ -7,8 +7,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Usan_servicios")
 public class UsanServicios {
-    public int idCliente;
-    public int idServicio;
     @EmbeddedId
     private UsanServiciosPK pk;
 
@@ -16,21 +14,10 @@ public class UsanServicios {
         ;
     }
 
-    public int getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    public int getIdServicio() {
-        return idServicio;
-    }
-
-    public void setIdServicio(int idServicio) {
-        this.idServicio = idServicio;
-    }
+   public UsanServicios(Cliente idCliente, Servicio idServicio){
+    this.pk = new UsanServiciosPK(idCliente, idServicio);
+    
+   }
 
     public UsanServiciosPK getPk() {
         return pk;

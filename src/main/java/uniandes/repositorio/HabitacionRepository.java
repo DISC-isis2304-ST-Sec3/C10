@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Habitacion;
+import uniandes.edu.co.proyecto.modelo.PlanDeConsumo;
 import uniandes.edu.co.proyecto.modelo.Reserva;
 
 public interface HabitacionRepository extends JpaRepository<Habitacion, Integer> {
@@ -26,7 +27,7 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
         void insertarHabitacion(@Param("Numero") int Numero, @Param("Tipo") String Tipo,
                         @Param("CapacidadMax") Integer CapacidadMax, @Param("Dotacion") String Dotacion,
                         @Param("Estado") String estado, @Param("Tarifa") Integer Tarifa,
-                        @Param("Plandeconsumo_id") int Plandeconsumo_id);
+                        @Param("Plandeconsumo_id") Integer Plandeconsumo_id);
 
         @Modifying
         @Transactional
@@ -34,7 +35,7 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
         void actualizarHabitacion(@Param("Numero") int Numero, @Param("Tipo") String Tipo,
                         @Param("CapacidadMax") Integer CapacidadMax, @Param("Dotacion") String Dotacion,
                         @Param("Estado") String estado, @Param("Tarifa") Integer Tarifa,
-                        @Param("Plandeconsumo_id") int Plandeconsumo_id);
+                        @Param("Plandeconsumo_id") Integer Plandeconsumo_id);
 
         @Modifying
         @Transactional
