@@ -36,8 +36,8 @@ public class ConsumoController {
     public String consumoGuardar(@ModelAttribute Consumo consumo) {
         consumoRepository.insertarConsumo(consumo.getId(), consumo.getFecha(), consumo.getDescripcion(),
                 consumo.getPrecioUnitario(),
-                consumo.getCantidad(), consumo.getTotal(), consumo.getServicioID(), consumo.getNumeroReserva(),
-                consumo.getUsuarioid());
+                consumo.getCantidad(), consumo.getTotal(), consumo.getServicioID().getId(), consumo.getNumeroReserva().getId(),
+                consumo.getUsuarioid().getId());
         return "redirect:/consumos";
     }
 
@@ -56,8 +56,8 @@ public class ConsumoController {
     public String consumoEditarGuardar(@ModelAttribute Consumo consumo, @PathVariable("id") int id) {
         consumoRepository.actualizarConsumo(consumo.getId(), consumo.getFecha(), consumo.getDescripcion(),
                 consumo.getPrecioUnitario(),
-                consumo.getCantidad(), consumo.getTotal(), consumo.getServicioID(), consumo.getNumeroReserva(),
-                consumo.getUsuarioid());
+                consumo.getCantidad(), consumo.getTotal(), consumo.getServicioID().getId(), consumo.getNumeroReserva().getId(),
+                consumo.getUsuarioid().getId());
         return "redirect:/consumos";
 
     }

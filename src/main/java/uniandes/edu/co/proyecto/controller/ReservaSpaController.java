@@ -32,7 +32,8 @@ public class ReservaSpaController {
 
     @PostMapping("/reservasSpa/new/save")
     public String reservaSpaGuardar(@ModelAttribute ReservaSpa reservaSpa) {
-        reservaSpaRepository.insertarReservaSpa(reservaSpa.getId(), reservaSpa.getHoraio());
+        reservaSpaRepository.insertarReservaSpa(reservaSpa.getId(), reservaSpa.getHorario(), 
+        reservaSpa.getNumerohabitacion().getNumero(), reservaSpa.getNumerodocumento().getId());
         return "redirect:/reservas";
     }
 
@@ -49,7 +50,8 @@ public class ReservaSpaController {
 
     @PostMapping("/reservasSpa/{id}/edit/save")
     public String reservaSpaEditarGuardar(@ModelAttribute ReservaSpa reservaSpa, @PathVariable("id") int id) {
-        reservaSpaRepository.actualizarReservaSpa(id, reservaSpa.getHoraio());
+        reservaSpaRepository.actualizarReservaSpa(id, reservaSpa.getHorario(),
+        reservaSpa.getNumerohabitacion().getNumero(), reservaSpa.getNumerodocumento().getId());
         return "redirect:/reservasSpa";
 
     }
