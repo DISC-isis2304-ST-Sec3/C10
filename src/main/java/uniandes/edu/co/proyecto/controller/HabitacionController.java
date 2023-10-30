@@ -38,7 +38,7 @@ public class HabitacionController {
     public String habitacionGuardar(@ModelAttribute Habitacion habitacion) {
         habitacionRepository.insertarHabitacion(habitacion.getNumero(), habitacion.getTipo(),
                 habitacion.getCapacidadMax(), habitacion.getDotacion(), habitacion.getEstado(), habitacion.getTarifa(),
-                habitacion.getPlanDeConsumo());
+                habitacion.getPlanDeConsumo().getId());
         return "redirect:/habitaciones";
     }
 
@@ -57,7 +57,7 @@ public class HabitacionController {
     public String habitacionEditarGuardar(@ModelAttribute Habitacion habitacion, @PathVariable("id") int id) {
         habitacionRepository.actualizarHabitacion(habitacion.getNumero(), habitacion.getTipo(),
                 habitacion.getCapacidadMax(), habitacion.getDotacion(), habitacion.getEstado(), habitacion.getTarifa(),
-                habitacion.getPlanDeConsumo());
+                habitacion.getPlanDeConsumo().getId());
         return "redirect:/habitaciones";
 
     }

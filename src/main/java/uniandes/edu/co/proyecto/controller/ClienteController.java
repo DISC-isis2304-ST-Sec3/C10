@@ -34,7 +34,7 @@ public class ClienteController {
     public String clienteGuardar(@ModelAttribute Cliente cliente) {
         clienteRepository.insertarCliente(cliente.getId(), cliente.getNombre(), cliente.getApellido(),
                 cliente.getTipo(),
-                cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual());
+                cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getNombre());
         return "redirect:/clientes";
     }
 
@@ -53,7 +53,7 @@ public class ClienteController {
     public String clienteEditarGuardar(@ModelAttribute Cliente cliente, @PathVariable("id") int id) {
         clienteRepository.actualizarCliente(cliente.getId(), cliente.getNombre(), cliente.getApellido(),
                 cliente.getTipo(),
-                cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual());
+                cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getNombre());
         return "redirect:/clientes";
 
     }
