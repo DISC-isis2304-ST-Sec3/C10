@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,7 +21,12 @@ public class Reserva {
     private Date fechaSalida;
     private Integer NumeroPersonas;
     private String Estado;
-    public int numeroDocumento;
+
+    @ManyToOne
+    @JoinColumn(name="Cliente",referencedColumnName = "id")
+    public Cliente numeroDocumento;
+
+   
     public int idEmpleado;
 
     public Reserva(Date fechaEntrada, Date fechaSalida, Integer numeroPersonas, String estado) {
