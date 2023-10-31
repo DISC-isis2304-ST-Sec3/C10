@@ -9,60 +9,61 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Cliente;
+import uniandes.edu.co.proyecto.modelo.Habitacion;
 import uniandes.edu.co.proyecto.modelo.Reserva;
 import uniandes.edu.co.proyecto.modelo.ReservanHabitaciones;
+import uniandes.edu.co.proyecto.modelo.ReservanHabitacionesPK;
+import uniandes.edu.co.proyecto.modelo.Servicio;
+import uniandes.edu.co.proyecto.modelo.UsanServicios;
+import uniandes.edu.co.proyecto.modelo.UsanServiciosPK;
 import uniandes.repositorio.ClienteRepository;
+import uniandes.repositorio.HabitacionRepository;
 import uniandes.repositorio.ReservaRepository;
 import uniandes.repositorio.ReservanHabitacionesRepository;
+import uniandes.repositorio.ServicioRepository;
+import uniandes.repositorio.UsanServiciosRepository;
 
 @Controller
 public class ReservanHabitacionesController {
     @Autowired
+    private ReservaRepository reservaRepository;
+
+    @Autowired
+    private HabitacionRepository habitacionRepository;
+
+    @Autowired
     private ReservanHabitacionesRepository reservanHabitacionesRepository;
 
-    @GetMapping("/reservanHabitacioness")
-    public String reservanHabitacioness(Model model) {
-        model.addAttribute("reservanHabitacioness", reservanHabitacionesRepository.darReservanHabitacioness());
-        return "reservanHabitacioness";
+    
+
+    @GetMapping("/ReservanHabitaciones/new")
+    public String usanSpaForm(Model model) { 
+        model.addAttribute("numero", habitacionRepository.darHabitaciones());
+        model.addAttribute("id", reservaRepository.darReservas());
+        return "Reservanhabitacionesnuevas";
     }
+        
+    
+    
 
-    @GetMapping("/reservanHabitacioness/new")
-    public String reservanHabitacionesForm(Model model) {
-        model.addAttribute("reservanHabitacioness", new ReservanHabitaciones());
-        return "reservanHabitacionesNuevo";
-    }
+    @PostMapping("/ResrvanHabitaciones/new/save")
+    public String usanSpaGuardar(@ModelAttribute("numero_habitacion") Integer numhabitacion,
+         @ModelAttribute("id_reserva") Integer idreserva) {
 
-    @PostMapping("/reservanHabitacioness/new/save")
-    public String reservanHabitacionesGuardar(@ModelAttribute ReservanHabitaciones reservanHabitaciones) {
-        reservanHabitacionesRepository.insertarReservanHabitaciones(reservanHabitaciones.getNumReserva(),
-                reservanHabitaciones.getNumHabitacion());
-        ;
-        return "redirect:/reservanHabitacioness";
-    }
+        
+        Habitacion habitacion = habitacionRepository.darHabitacion(numhabitacion);
+        Reserva reserva = reservaRepository.darReserva(idreserva);
+        ReservanHabitacionesPK pk = new ReservanHabitacionesPK(reserva, habitacion);
+        ReservanHabitaciones reservanHabitaciones = new ReservanHabitaciones();
+        reservanHabitaciones.setPk(pk);
+        reservanHabitacionesRepository.insertarReservanHabitaciones(reservanHabitaciones.getPk().getNumero_reserva().getId(),reservanHabitaciones.getPk().getNumero_habitacion().getNumero());
 
-    @GetMapping("/reservanHabitacioness/{id}/edit")
-    public String reservanHabitacionesEditarForm(@ModelAttribute ReservanHabitaciones reservanHabitaciones,
-            Model model) {
-        if (reservanHabitaciones != null) {
-            model.addAttribute("reservanHabitaciones", reservanHabitaciones);
-            return "editarReservanHabitaciones";
-        } else {
-            return "/redirect:/reservanHabitacioness";
-        }
-    }
+    
+    
+        
+            
+        return "redirect:/Cliente"; 
+         
 
-    @PostMapping("/reservanHabitacioness/{id}/edit/save")
-    public String reservanHabitacionesEditarGuardar(@ModelAttribute ReservanHabitaciones reservanHabitaciones) {
-        reservanHabitacionesRepository.actualizarReservan_habitaciones(reservanHabitaciones.getNumReserva(),
-                reservanHabitaciones.getNumHabitacion());
-        return "redirect:/reservanHabitacioness";
-
-    }
-
-    @GetMapping("/reservanHabitacioness/{id}/delete")
-    public String reservanHabitacionesEliminar(@ModelAttribute ReservanHabitaciones reservanHabitaciones) {
-        reservanHabitacionesRepository.eliminarReservan_habitaciones(reservanHabitaciones.getNumReserva(),
-                reservanHabitaciones.getNumHabitacion());
-        return "redirect:/reservanHabitacioness";
     }
 }

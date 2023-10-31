@@ -10,58 +10,62 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.Reserva;
+import uniandes.edu.co.proyecto.modelo.ReservaSpa;
 import uniandes.edu.co.proyecto.modelo.ReservanHabitaciones;
+import uniandes.edu.co.proyecto.modelo.SPA;
+import uniandes.edu.co.proyecto.modelo.Servicio;
 import uniandes.edu.co.proyecto.modelo.UsanServicios;
+import uniandes.edu.co.proyecto.modelo.UsanServiciosPK;
+import uniandes.edu.co.proyecto.modelo.UsanSpa;
+import uniandes.edu.co.proyecto.modelo.Usan_spaPK;
 import uniandes.repositorio.ClienteRepository;
 import uniandes.repositorio.ReservaRepository;
+import uniandes.repositorio.ReservaSpaRepository;
 import uniandes.repositorio.ReservanHabitacionesRepository;
+import uniandes.repositorio.SPARepository;
+import uniandes.repositorio.ServicioRepository;
 import uniandes.repositorio.UsanServiciosRepository;
+import uniandes.repositorio.UsanSpaRepository;
 
 @Controller
 public class UsanServiciosController {
     @Autowired
-    private UsanServiciosRepository usanServiciosRepository;
+    private UsanServiciosRepository UsanServiciosRepository;
 
-    @GetMapping("/usanServicioss")
-    public String usanServicioss(Model model) {
-        model.addAttribute("usanServicioss", usanServiciosRepository.darUsanServicioss());
-        return "usanServicioss";
+    @Autowired
+    private ServicioRepository servicioRepository;
+
+    @Autowired
+    private ClienteRepository ClienteRepository;
+
+    
+
+    @GetMapping("/UsanServicios/new")
+    public String usanSpaForm(Model model) { 
+        model.addAttribute("id", servicioRepository.darServicios());
+        model.addAttribute("id", ClienteRepository.darClientes());
+        return "UsanServiciosnuevos";
     }
+        
+    
+    
 
-    @GetMapping("/usanServicioss/new")
-    public String usanServiciossForm(Model model) {
-        model.addAttribute("usanServicioss", new UsanServicios());
-        return "usanServiciosNuevo";
-    }
+    @PostMapping("/UsanServicios/new/save")
+    public String usanSpaGuardar(@ModelAttribute("id_servicio") Integer idServicio,
+         @ModelAttribute("id_cliente") Integer idcliente) {
 
-    @PostMapping("/usanServicioss/new/save")
-    public String usanServiciosGuardar(@ModelAttribute UsanServicios usanServicios) {
-        usanServiciosRepository.insertarUsan_servicios(usanServicios.getIdCliente(), usanServicios.getIdServicio());
-        ;
-        return "redirect:/usanServicioss";
-    }
+        Cliente cliente = ClienteRepository.darCliente(idcliente);
+        Servicio servicio = servicioRepository.darServicio(idServicio);
+        UsanServiciosPK pk = new UsanServiciosPK(cliente, servicio);
+        UsanServicios usanservicio = new UsanServicios();
+        usanservicio.setPk(pk);
+        UsanServiciosRepository.insertarUsan_servicios(usanservicio.getPk().getId_cliente().getId(), usanservicio.getPk().getId_Servicio().getId());
+    
+    
+        
+            
+        return "redirect:/Cliente"; 
+         
 
-    @GetMapping("/usanServicioss/{id}/edit")
-    public String usanServiciosEditarForm(@ModelAttribute UsanServicios usanServicios,
-            Model model) {
-        if (usanServicios != null) {
-            model.addAttribute("usanServicios", usanServicios);
-            return "editarusanServicios";
-        } else {
-            return "/redirect:/usanServicioss";
-        }
-    }
-
-    @PostMapping("/usanServicioss/{id}/edit/save")
-    public String usanServiciosEditarGuardar(@ModelAttribute UsanServicios usanServicios) {
-        usanServiciosRepository.actualizarUsan_servicios(usanServicios.getIdCliente(), usanServicios.getIdServicio());
-        return "redirect:/usanServicioss";
-
-    }
-
-    @GetMapping("/usanServicioss/{id}/delete")
-    public String usanServiciosEliminar(@ModelAttribute UsanServicios usanServicios) {
-        usanServiciosRepository.eliminarUsan_servicios(usanServicios.getIdCliente(), usanServicios.getIdServicio());
-        return "redirect:/usanServicioss";
     }
 }

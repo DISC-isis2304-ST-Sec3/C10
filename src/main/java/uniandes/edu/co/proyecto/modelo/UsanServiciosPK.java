@@ -8,8 +8,8 @@ import jakarta.persistence.ManyToOne;
 public class UsanServiciosPK implements Serializable {
 
     @ManyToOne
-    @JoinColumn(name = "NumerodeIdentificación_cliente", referencedColumnName = "NumerodeIdentificación")
-    private Cliente NumerodeIdentificación_cliente;
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id")
+    private Cliente id_cliente;
 
     @ManyToOne
     @JoinColumn(name = "id_servicio", referencedColumnName = "id")
@@ -19,18 +19,18 @@ public class UsanServiciosPK implements Serializable {
         super();
     }
 
-    public UsanServiciosPK(Cliente numerodeIdentificación_cliente, Servicio id_Servicio) {
+    public UsanServiciosPK(Cliente id_cliente, Servicio id_Servicio) {
         super();
-        this.NumerodeIdentificación_cliente = numerodeIdentificación_cliente;
+        this.id_cliente = id_cliente;
         this.id_Servicio = id_Servicio;
     }
 
-    public Cliente getNumerodeIdentificación_cliente() {
-        return NumerodeIdentificación_cliente;
+    public Cliente id_cliente() {
+        return id_cliente;
     }
 
-    public void setNumerodeIdentificación_cliente(Cliente numerodeIdentificación_cliente) {
-        this.NumerodeIdentificación_cliente = numerodeIdentificación_cliente;
+    public void id_cliente(Cliente id_cliente) {
+        this.id_cliente = id_cliente;
     }
 
     public Servicio getId_Servicio() {
@@ -40,5 +40,15 @@ public class UsanServiciosPK implements Serializable {
     public void setId_Servicio(Servicio id_Servicio) {
         this.id_Servicio = id_Servicio;
     }
+
+    public Cliente getId_cliente() {
+        return id_cliente;
+    }
+
+    public void setId_cliente(Cliente id_cliente) {
+        this.id_cliente = id_cliente;
+    }
+
+    
 
 }

@@ -10,9 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.Reserva;
+import uniandes.edu.co.proyecto.modelo.ReservaSpa;
+import uniandes.edu.co.proyecto.modelo.SPA;
 import uniandes.edu.co.proyecto.modelo.UsanSpa;
+import uniandes.edu.co.proyecto.modelo.Usan_spaPK;
 import uniandes.repositorio.ClienteRepository;
 import uniandes.repositorio.ReservaRepository;
+import uniandes.repositorio.ReservaSpaRepository;
+import uniandes.repositorio.SPARepository;
 import uniandes.repositorio.UsanSpaRepository;
 
 @Controller
@@ -20,47 +25,40 @@ public class UsanSpaController {
     @Autowired
     private UsanSpaRepository usanSpaRepository;
 
-    @GetMapping("/usanSpas")
-    public String usanSpas(Model model) {
-        model.addAttribute("usanSpas", usanSpaRepository.darUsanspas());
-        return "usanSpas";
-    }
+    @Autowired
+    private SPARepository spaRepository;
 
-    @GetMapping("/usanSpas/new")
-    public String usanSpaForm(Model model) {
-        model.addAttribute("usanSpa", new UsanSpa());
+    @Autowired
+    private ReservaSpaRepository reservaSpaRepository;
+
+    
+
+    @GetMapping("/UsanSpa/new")
+    public String usanSpaForm(Model model) { 
+        model.addAttribute("id", spaRepository.darSPAS());
+        model.addAttribute("NumReserva", reservaSpaRepository.darReservasSpa());
         return "usanSpaNuevo";
     }
+        
+    
+    
 
-    @PostMapping("/usanSpas/new/save")
-    public String usanSpaGuardar(@ModelAttribute UsanSpa usanSpa) {
-        usanSpaRepository.insertarUsanSpa(usanSpa.getId(), usanSpa.getIdReservasSpa());
-        ;
-        return "redirect:/usanSpas";
-    }
+    @PostMapping("/UsanSpa/new/save")
+    public String usanSpaGuardar(@ModelAttribute("id_spa") Integer idSPA,
+         @ModelAttribute("id_reservaspa") Integer idreservaspa) {
 
-    @GetMapping("/usanSpas/{id}/edit")
-    public String usanSpaEditarForm(@PathVariable("id") int id, @PathVariable("idReserva") int idReserva,
-            Model model) {
-        UsanSpa usanSpa = usanSpaRepository.darUsanSpa(id, idReserva);
-        if (usanSpa != null) {
-            model.addAttribute("usanSpa", usanSpa);
-            return "editarUsanSpa";
-        } else {
-            return "/redirect:/usanSpas";
-        }
-    }
-
-    @PostMapping("/usanSpas/{id}/edit/save")
-    public String usanSpaEditarGuardar(@ModelAttribute UsanSpa usanSpa, @PathVariable("id") int id) {
-        usanSpaRepository.actualizarUsanSpa(id, usanSpa.getIdReservasSpa());
-        return "redirect:/usanSpas";
+        SPA SPA = spaRepository.darSPA(idSPA);
+        ReservaSpa reservaSpa = reservaSpaRepository.darReservaSpa(idreservaspa);
+        Usan_spaPK pk = new Usan_spaPK(SPA, reservaSpa);
+        UsanSpa usanspa = new UsanSpa();
+        usanspa.setPk(pk); 
+        usanSpaRepository.insertarUsanSpa(usanspa.getPk().getId_Spa().getId(), usanspa.getPk().getId_ReservaSpa().getId());
+        
+            
+        return "redirect:/SPA"; 
+         
 
     }
 
-    @GetMapping("/usanSpas/{id}/delete")
-    public String usanSpaEliminar(@ModelAttribute UsanSpa usanSpa, @PathVariable("id") int id) {
-        usanSpaRepository.eliminarUsanSpa(id, usanSpa.getIdReservasSpa());
-        return "redirect:/usanSpas";
-    }
+
 }
