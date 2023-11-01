@@ -1,4 +1,4 @@
-package uniandes.repositorio;
+package uniandes.edu.co.proyecto.repositorio;
 
 import java.sql.Date;
 import java.util.Collection;
@@ -7,28 +7,31 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Reserva;
 import uniandes.edu.co.proyecto.modelo.Servicio;
 
+@Repository
+
 public interface ServicioRepository extends JpaRepository<Servicio, Integer> {
 
-        @Query(value = "SELECT.* FROM servicios", nativeQuery = true)
+        @Query(value = "SELECT.* FROM servicio", nativeQuery = true)
         Collection<Servicio> darServicios();
 
-        @Query(value = "SELECT.* FROM servicios WHERE id = :id", nativeQuery = true)
+        @Query(value = "SELECT.* FROM servicio WHERE id = :id", nativeQuery = true)
         Servicio darServicio(@Param("id") int id);
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO servicios (id, nombre, capacidad, Horario) VALUES(hotel_sequence.nextval, :nombre, :capacidad, :horario)")
+        @Query(value = "INSERT INTO servicio (id, nombre, capacidad, Horario) VALUES(hotel_sequence.nextval, :nombre, :capacidad, :horario)")
         void insertarServicio(@Param("id") int id, @Param("nombre") String nombre, @Param("capacidad") int capacidad,
                         @Param("Horario") Date Horario);
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE servicios SET id =:id, nombre =:nombre, capacidad=:capacidad, Horario=:Horario WHERE id =:id", nativeQuery = true)
+        @Query(value = "UPDATE servicio SET id =:id, nombre =:nombre, capacidad=:capacidad, Horario=:Horario WHERE id =:id", nativeQuery = true)
         void actualizarServicio(@Param("id") int id, @Param("nombre") String nombre, @Param("capacidad") int capacidad,
                         @Param("Horario") Date Horario);
 

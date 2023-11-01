@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Reserva;
 import uniandes.edu.co.proyecto.modelo.ReservaSpa;
-import uniandes.repositorio.ReservaRepository;
-import uniandes.repositorio.ReservaSpaRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaSpaRepository;
 
 @Controller
 public class ReservaSpaController {

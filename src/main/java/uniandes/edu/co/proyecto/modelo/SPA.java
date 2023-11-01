@@ -2,6 +2,13 @@ package uniandes.edu.co.proyecto.modelo;
 
 import java.sql.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.persistence.Table;
+
+@Entity
+@PrimaryKeyJoinColumn(name = "servicio_id")
+
 public class SPA extends Servicio {
     private Integer Duracion_min;
     private String Tipo;

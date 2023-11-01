@@ -6,7 +6,7 @@ import jakarta.persistence.ManyToOne;
 public class ReservanHabitacionesPK {
 
     @ManyToOne
-    @JoinColumn(name = "Numero_reserva", referencedColumnName = "Numero")
+    @JoinColumn(name = "id_reserva", referencedColumnName = "id")
     private Reserva Numero_reserva;
 
     @ManyToOne

@@ -2,8 +2,15 @@ package uniandes.edu.co.proyecto.modelo;
 
 import java.sql.Date;
 
-public class Servicio {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "servicio")
+
+public class Servicio {
+    @Id
     private int id;
     private Date Horario;
     private Integer capacidad;

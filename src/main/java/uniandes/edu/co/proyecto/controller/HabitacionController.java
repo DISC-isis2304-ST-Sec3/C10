@@ -12,10 +12,10 @@ import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.Consumo;
 import uniandes.edu.co.proyecto.modelo.Habitacion;
 import uniandes.edu.co.proyecto.modelo.Reserva;
-import uniandes.repositorio.ClienteRepository;
-import uniandes.repositorio.ConsumoRepository;
-import uniandes.repositorio.HabitacionRepository;
-import uniandes.repositorio.ReservaRepository;
+import uniandes.edu.co.proyecto.repositorio.ClienteRepository;
+import uniandes.edu.co.proyecto.repositorio.ConsumoRepository;
+import uniandes.edu.co.proyecto.repositorio.HabitacionRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
 
 @Controller
 public class HabitacionController {
@@ -38,7 +38,7 @@ public class HabitacionController {
     public String habitacionGuardar(@ModelAttribute Habitacion habitacion) {
         habitacionRepository.insertarHabitacion(habitacion.getNumero(), habitacion.getTipo(),
                 habitacion.getCapacidadMax(), habitacion.getDotacion(), habitacion.getEstado(), habitacion.getTarifa(),
-                habitacion.getPlanDeConsumo().getId());
+                habitacion.getPlanDeConsumo().getId(),habitacion.getTipo_habitacion().getId());
         return "redirect:/habitaciones";
     }
 
@@ -57,7 +57,7 @@ public class HabitacionController {
     public String habitacionEditarGuardar(@ModelAttribute Habitacion habitacion, @PathVariable("id") int id) {
         habitacionRepository.actualizarHabitacion(habitacion.getNumero(), habitacion.getTipo(),
                 habitacion.getCapacidadMax(), habitacion.getDotacion(), habitacion.getEstado(), habitacion.getTarifa(),
-                habitacion.getPlanDeConsumo().getId());
+                habitacion.getPlanDeConsumo().getId(),habitacion.getTipo_habitacion().getId());
         return "redirect:/habitaciones";
 
     }

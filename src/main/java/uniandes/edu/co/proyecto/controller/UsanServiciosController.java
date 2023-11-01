@@ -18,14 +18,14 @@ import uniandes.edu.co.proyecto.modelo.UsanServicios;
 import uniandes.edu.co.proyecto.modelo.UsanServiciosPK;
 import uniandes.edu.co.proyecto.modelo.UsanSpa;
 import uniandes.edu.co.proyecto.modelo.Usan_spaPK;
-import uniandes.repositorio.ClienteRepository;
-import uniandes.repositorio.ReservaRepository;
-import uniandes.repositorio.ReservaSpaRepository;
-import uniandes.repositorio.ReservanHabitacionesRepository;
-import uniandes.repositorio.SPARepository;
-import uniandes.repositorio.ServicioRepository;
-import uniandes.repositorio.UsanServiciosRepository;
-import uniandes.repositorio.UsanSpaRepository;
+import uniandes.edu.co.proyecto.repositorio.ClienteRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaSpaRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservanHabitacionesRepository;
+import uniandes.edu.co.proyecto.repositorio.SPARepository;
+import uniandes.edu.co.proyecto.repositorio.ServicioRepository;
+import uniandes.edu.co.proyecto.repositorio.UsanServiciosRepository;
+import uniandes.edu.co.proyecto.repositorio.UsanSpaRepository;
 
 @Controller
 public class UsanServiciosController {

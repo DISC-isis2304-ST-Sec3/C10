@@ -1,4 +1,4 @@
-package uniandes.repositorio;
+package uniandes.edu.co.proyecto.repositorio;
 
 import java.sql.Date;
 import java.util.Collection;
@@ -7,10 +7,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.Reserva;
+
+@Repository
 
 public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
 
@@ -22,21 +25,21 @@ public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO reservas (fechaEntrada,FechaSalida,NumeroPersonas,Cliente_NumerodeIdentificacion,Estado,Empleado_id) VALUES(hotel_sequence.nextval, :fechaEntrada, :FechaSalida, :NumeroPersonas, :Cliente_NumerodeIdentificacion, :Estado, :Empleado_id )")
+        @Query(value = "INSERT INTO reservas (fechaEntrada,FechaSalida,NumeroPersonas,Cliente_id,Estado,Empleado_id) VALUES(hotel_sequence.nextval, :fechaEntrada, :FechaSalida, :NumeroPersonas, :Cliente_NumerodeIdentificacion, :Estado, :Empleado_id )")
         void insertarReserva(@Param("id") int id, @Param("fechaEntrada") Date fechaentrada,
                         @Param("FechaSalida") Date fechasalida,
                         @Param("NumeroPersonas") Integer numeropersonas,
-                        @Param("Cliente_NumerodeIdentificacion") Cliente numerodocumento,
+                        @Param("Cliente_id") Cliente numerodocumento,
                         @Param("Estado") String estado,
                         @Param("Empleado_id") Integer id_empleado);
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE reservas SET fechaEntrada =:fechaEntrada, FechaSalida=:FechaSalida, NumeroPersonas=:NumeroPersonas, Cliente_NumeroIdentificacion=:Cliente_NumerodeIdentificacion, Estado=:Estado, Empleado_id=:Empleado_id WHERE id =:id", nativeQuery = true)
+        @Query(value = "UPDATE reservas SET fechaEntrada =:fechaEntrada, FechaSalida=:FechaSalida, NumeroPersonas=:NumeroPersonas, Cliente_id=:Cliente_id, Estado=:Estado, Empleado_id=:Empleado_id WHERE id =:id", nativeQuery = true)
         void actualizarReserva(@Param("id") int id, @Param("fechaEntrada") Date fechaentrada,
                         @Param("FechaSalida") Date fechasalida,
                         @Param("NumeroPersonas") Integer numeropersonas,
-                        @Param("Cliente_NumerodeIdentificacion") Cliente numerodocumento,
+                        @Param("Cliente_id") Cliente numerodocumento,
                         @Param("Estado") String estado,
                         @Param("Empleado_id") Integer id_empleado);
 

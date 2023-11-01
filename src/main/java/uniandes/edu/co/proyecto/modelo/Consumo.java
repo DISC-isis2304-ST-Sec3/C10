@@ -11,7 +11,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "consumos")
+@Table(name = "consumo")
 public class Consumo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,11 +27,11 @@ public class Consumo {
     private Servicio servicioID;
 
     @ManyToOne
-    @JoinColumn(name = "numero_Reserva", referencedColumnName = "numero")
+    @JoinColumn(name = "id_Reserva", referencedColumnName = "id")
     private Reserva numeroReserva;
 
     @ManyToOne
-    @JoinColumn(name = "usuario_id", referencedColumnName = "id")
+    @JoinColumn(name = "cliente_id", referencedColumnName = "id")
     private Usuario usuarioid;
 
     public Consumo(Date fecha, String descripcion, Integer precioUnitario, Integer cantidad, Integer total,

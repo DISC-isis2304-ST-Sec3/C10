@@ -16,12 +16,12 @@ import uniandes.edu.co.proyecto.modelo.ReservanHabitacionesPK;
 import uniandes.edu.co.proyecto.modelo.Servicio;
 import uniandes.edu.co.proyecto.modelo.UsanServicios;
 import uniandes.edu.co.proyecto.modelo.UsanServiciosPK;
-import uniandes.repositorio.ClienteRepository;
-import uniandes.repositorio.HabitacionRepository;
-import uniandes.repositorio.ReservaRepository;
-import uniandes.repositorio.ReservanHabitacionesRepository;
-import uniandes.repositorio.ServicioRepository;
-import uniandes.repositorio.UsanServiciosRepository;
+import uniandes.edu.co.proyecto.repositorio.ClienteRepository;
+import uniandes.edu.co.proyecto.repositorio.HabitacionRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservanHabitacionesRepository;
+import uniandes.edu.co.proyecto.repositorio.ServicioRepository;
+import uniandes.edu.co.proyecto.repositorio.UsanServiciosRepository;
 
 @Controller
 public class ReservanHabitacionesController {

@@ -1,27 +1,42 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.DiscriminatorColumn;
+import jakarta.persistence.DiscriminatorType;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "usuario")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipouser", discriminatorType = DiscriminatorType.STRING )
 
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String Nombre;
     private String Apellido;
-    private Integer Num_documento;
-    private String Tipo;
+    
+    @ManyToOne
+    @JoinColumn(name = "Tipo_usuario",referencedColumnName = "id")
+    private Tipo_usuario tipousuarioid;
 
     
 
-    public Usuario(String nombre, String apellido, Integer num_documento, String tipo) {
+    
+
+    public Usuario(Integer id, String nombre, String apellido, Tipo_usuario tipousuarioid) {
+        this.id = id;
         Nombre = nombre;
         Apellido = apellido;
-        Num_documento = num_documento;
-        Tipo = tipo;
-        
+        this.tipousuarioid = tipousuarioid;
     }
 
     public Usuario()
@@ -51,21 +66,20 @@ public class Usuario {
         Apellido = apellido;
     }
 
-    public Integer getNum_documento() {
-        return Num_documento;
+
+    
+
+    public Tipo_usuario getTipousuarioid() {
+        return tipousuarioid;
     }
 
-    public void setNum_documento(Integer num_documento) {
-        Num_documento = num_documento;
+    public void setTipousuarioid(Tipo_usuario tipousuarioid) {
+        this.tipousuarioid = tipousuarioid;
     }
 
-    public String getTipo() {
-        return Tipo;
-    }
+    
 
-    public void setTipo(String tipo) {
-        Tipo = tipo;
-    }
+
 
     
     

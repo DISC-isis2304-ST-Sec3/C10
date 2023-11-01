@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.Reserva;
 import uniandes.edu.co.proyecto.modelo.SPA;
-import uniandes.repositorio.ClienteRepository;
-import uniandes.repositorio.ReservaRepository;
-import uniandes.repositorio.SPARepository;
+import uniandes.edu.co.proyecto.repositorio.ClienteRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
+import uniandes.edu.co.proyecto.repositorio.SPARepository;
 
 @Controller
 public class SpaController {
@@ -34,7 +34,7 @@ public class SpaController {
 
     @PostMapping("/spas/new/save")
     public String spaGuardar(@ModelAttribute SPA spa) {
-        spaRepository.insertarSPA(spa.getId(), spa.getNombre(), spa.getDuracion_min(), spa.getTipo(), spa.getCosto());
+        spaRepository.insertarSPA(spa.getId(), spa.getDuracion_min(), spa.getTipo(), spa.getCosto());
         return "redirect:/spas";
     }
 
@@ -51,7 +51,7 @@ public class SpaController {
 
     @PostMapping("/spas/{id}/edit/save")
     public String spaEditarGuardar(@ModelAttribute SPA spa, @PathVariable("id") int id) {
-        spaRepository.actualizarSPA(spa.getId(), spa.getNombre(), spa.getDuracion_min(), spa.getTipo(), spa.getCosto());
+        spaRepository.actualizarSPA(spa.getId(), spa.getDuracion_min(), spa.getTipo(), spa.getCosto());
         return "redirect:/spas";
 
     }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Reserva;
-import uniandes.repositorio.ReservaRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
 
 @Controller
 public class ReservaController {

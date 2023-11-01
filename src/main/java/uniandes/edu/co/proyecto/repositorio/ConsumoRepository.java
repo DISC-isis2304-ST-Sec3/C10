@@ -1,4 +1,4 @@
-package uniandes.repositorio;
+package uniandes.edu.co.proyecto.repositorio;
 
 import java.sql.Date;
 import java.util.Collection;
@@ -7,12 +7,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Consumo;
 import uniandes.edu.co.proyecto.modelo.Reserva;
 import uniandes.edu.co.proyecto.modelo.Servicio;
 import uniandes.edu.co.proyecto.modelo.Usuario;
+
+@Repository
 
 public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
@@ -24,7 +27,7 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO consumos (id, Fecha,descripcion,precioUnitario,cantidad,total,servicio_id,Usuario_id) VALUES(hotel_sequence.nextval,:id, :Fecha, :descripcion, :precioUnitario, :Estado, :Empleado_id,:servicio_id, :usuario_id )")
+        @Query(value = "INSERT INTO consumos (id, Fecha,descripcion,precioUnitario,cantidad,total,servicio_id,cliente_id) VALUES(:id, :Fecha, :descripcion, :precioUnitario, :Estado, :Empleado_id,:servicio_id, :cliente_id )")
         void insertarConsumo(@Param("id") int id,@Param("Fecha") Date fechaentrada, @Param("descripcion") String descripcion,
                         @Param("PrecioUnitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
                         @Param("total") Integer total, @Param("servicio_id") Integer servicio_id,
@@ -32,11 +35,11 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE consumos SET fechaEntrada =:fechaEntrada, FechaSalida=:FechaSalida, NumeroPersonas=:NumeroPersonas, Cliente_NumeroIdentificacion=:Cliente_NumerodeIdentificacion, Estado=:Estado, Empleado_id=:Empleado_id WHERE id =:id", nativeQuery = true)
+        @Query(value = "UPDATE consumos SET Fecha =:Fecha, descripcion=:descripcion, PrecioUnitario=:PrecioUnitario, cantidad=:cantidad, total=:total, servicio_id=:servicio_id, cliente_id =:cliente_id WHERE id =:id", nativeQuery = true)
         void actualizarConsumo(@Param("id") int id, @Param("Fecha") Date fechaentrada, @Param("descripcion") String descripcion,
                         @Param("PrecioUnitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
                         @Param("total") Integer total, @Param("servicio_id") Integer servicio_id,
-                        @Param("numero_reserva") Integer numero_reserva, @Param("Usuario_id") Integer Usuario_id);
+                        @Param("numero_reserva") Integer numero_reserva, @Param("cliente_id") Integer Usuario_id);
 
         @Modifying
         @Transactional

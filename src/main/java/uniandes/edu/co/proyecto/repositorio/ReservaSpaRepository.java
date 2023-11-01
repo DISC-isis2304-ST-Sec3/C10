@@ -1,9 +1,10 @@
-package uniandes.repositorio;
+package uniandes.edu.co.proyecto.repositorio;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
@@ -11,6 +12,8 @@ import java.util.Collection;
 
 import uniandes.edu.co.proyecto.modelo.Reserva;
 import uniandes.edu.co.proyecto.modelo.ReservaSpa;
+
+@Repository
 
 public interface ReservaSpaRepository extends JpaRepository<ReservaSpa, Integer> {
 

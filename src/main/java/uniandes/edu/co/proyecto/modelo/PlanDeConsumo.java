@@ -1,19 +1,24 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "plandeconsumo")
 
 public class PlanDeConsumo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private int Descuento;
+    private Integer id;
+    private Integer Descuento;
     private String descripcion;
     private String Nombre;
 
-    public PlanDeConsumo(int descuento, String descripcion, String nombre) {
+    public PlanDeConsumo(Integer id,Integer descuento, String descripcion, String nombre) {
+        this.id = id;
         Descuento = descuento;
         this.descripcion = descripcion;
         Nombre = nombre;
@@ -23,7 +28,7 @@ public class PlanDeConsumo {
         ;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -31,7 +36,7 @@ public class PlanDeConsumo {
         this.id = id;
     }
 
-    public int getDescuento() {
+    public Integer getDescuento() {
         return Descuento;
     }
 

@@ -10,35 +10,35 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.Reserva;
-import uniandes.repositorio.ClienteRepository;
-import uniandes.repositorio.ReservaRepository;
+import uniandes.edu.co.proyecto.repositorio.ClienteRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
 
 @Controller
 public class ClienteController {
     @Autowired
     private ClienteRepository clienteRepository;
+    @Autowired
 
-    @GetMapping("/clientes")
+
+    @GetMapping("/cliente")
     public String clientes(Model model) {
-        model.addAttribute("clientes", clienteRepository.darClientes());
-        return "clientes";
+      return "clientes";
     }
 
-    @GetMapping("/clientes/new")
+    @GetMapping("/cliente/new")
     public String clienteForm(Model model) {
         model.addAttribute("clientes", new Cliente());
         return "clienteNuevo";
     }
 
-    @PostMapping("/clientes/new/save")
+    @PostMapping("/cliente/new/save")
     public String clienteGuardar(@ModelAttribute Cliente cliente) {
-        clienteRepository.insertarCliente(cliente.getId(), cliente.getNombre(), cliente.getApellido(),
-                cliente.getTipo(),
-                cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getNombre());
+        clienteRepository.insertarCliente( cliente.getId(),
+                cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getId());
         return "redirect:/clientes";
     }
 
-    @GetMapping("/clientes/{id}/edit")
+    @GetMapping("/cliente/{id}/edit")
     public String clienteEditarForm(@PathVariable("id") int id, Model model) {
         Cliente cliente = clienteRepository.darCliente(id);
         if (cliente != null) {
@@ -49,11 +49,10 @@ public class ClienteController {
         }
     }
 
-    @PostMapping("/clientes/{id}/edit/save")
+    @PostMapping("/cliente/{id}/edit/save")
     public String clienteEditarGuardar(@ModelAttribute Cliente cliente, @PathVariable("id") int id) {
-        clienteRepository.actualizarCliente(cliente.getId(), cliente.getNombre(), cliente.getApellido(),
-                cliente.getTipo(),
-                cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getNombre());
+        clienteRepository.actualizarCliente(cliente.getId(),
+                cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getId());
         return "redirect:/clientes";
 
     }

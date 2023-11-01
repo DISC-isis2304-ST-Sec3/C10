@@ -1,12 +1,15 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "clientes")
+@Table(name = "cliente")
+@PrimaryKeyJoinColumn(name = "usuario_id")
 
 public class Cliente extends Usuario {
 
@@ -17,13 +20,13 @@ public class Cliente extends Usuario {
     @JoinColumn(name = "PlanDeConsumo", referencedColumnName = "id")
     private PlanDeConsumo Plandeconsumoactual;
 
-    public Cliente(String nombre, String apellido, int num_documento, String tipo, String direccion,
-            int telefono, PlanDeConsumo plandeconsumoactual) {
-        super(nombre, apellido, num_documento, tipo);
+    
+
+    public Cliente(Integer id, String nombre, String apellido, Tipo_usuario tipousuarioid, String direccion, Integer telefono,
+            PlanDeConsumo plandeconsumoactual) {
+        super(id, nombre, apellido, tipousuarioid);
         Direccion = direccion;
         Telefono = telefono;
-
-        
         Plandeconsumoactual = plandeconsumoactual;
     }
 

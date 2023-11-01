@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.PlanDeConsumo;
 import uniandes.edu.co.proyecto.modelo.Reserva;
-import uniandes.repositorio.ClienteRepository;
-import uniandes.repositorio.PlanDeConsumoRepository;
-import uniandes.repositorio.ReservaRepository;
+import uniandes.edu.co.proyecto.repositorio.ClienteRepository;
+import uniandes.edu.co.proyecto.repositorio.PlanDeConsumoRepository;
+import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
 
 @Controller
 public class PlanDeConsumoController {
