@@ -21,23 +21,23 @@ public interface ReservaSpaRepository extends JpaRepository<ReservaSpa, Integer>
         Collection<ReservaSpa> darReservasSpa();
 
         @Query(value = "SELECT.* FROM reservasSPA WHERE id = :id", nativeQuery = true)
-        ReservaSpa darReservaSpa(@Param("id") int id);
+        ReservaSpa darReservaSpa(@Param("id") Integer id);
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO reservasSPA (id, horario, numerohabitacion, numerodocumento)")
-        void insertarReservaSpa(@Param("id") int id, @Param("horario") Date horario, @Param("numerohabitacion") Integer numerohabitacion,
-        @Param("numerodocumento") Integer numerodocumento);
+        @Query(value = "INSERT INTO reservasSPA (id, horario, habitacion_numero, cliente_id) VALUES(:id, :horario, :habitacion_numero, :cliente_id)", nativeQuery = true)
+        void insertarReservaSpa(@Param("id") Integer id, @Param("horario") Date horario, @Param("habitacion_numero") Integer numerohabitacion,
+        @Param("cliente_id") Integer numerodocumento);
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE reservasSPA SET id =:id, horario=:horario", nativeQuery = true)
-        void actualizarReservaSpa(@Param("id") int id, @Param("horario") Date horario,@Param("numerohabitacion") Integer numerohabitacion,
-        @Param("numerodocumento") Integer numerodocumento);
+        @Query(value = "UPDATE reservasSPA SET id =:id, horario=:horario, habitacion_numero=:habitacion_numero, cliente_id=:cliente_id WHERE id=:id", nativeQuery = true)
+        void actualizarReservaSpa(@Param("id") Integer id, @Param("horario") Date horario,@Param("habitacion_numero") Integer numerohabitacion,
+        @Param("cliente_id") Integer numerodocumento);
 
         @Modifying
         @Transactional
         @Query(value = "DELETE FROM reservasSPA WHERE id=:id", nativeQuery = true)
-        void eliminarReservaSpa(@Param("id") int id);
+        void eliminarReservaSpa(@Param("id") Integer id);
 
 }

@@ -19,26 +19,27 @@ public interface UsanServiciosRepository extends JpaRepository<UsanServicios, In
         @Query(value = "SELECT.* FROM Usan_servicios", nativeQuery = true)
         Collection<UsanServicios> darUsanServicioss();
 
-        @Query(value = "SELECT * FROM Usan_servicios WHERE id_cliente = :id_cliente AND id_servicio = :id_servicio", nativeQuery = true)
-        UsanServicios darUsan_servicios(@Param("id_cliente") int id_cliente,
-                        @Param("id_servicio") int id_servicio);
+        @Query(value = "SELECT * FROM Usan_servicios WHERE cliente_id = :cliente_id AND servicio_id = :servicio_id", nativeQuery = true)
+        UsanServicios darUsan_servicios(@Param("cliente_id") int id_cliente,
+                        @Param("servicio_id") int id_servicio);
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO Usan_servicios (id_cliente,id_servicios) VALUES(hotel_sequence.nextval, :id_cliente,:id_servicios )")
-        void insertarUsan_servicios(@Param("id_cliente") int id_cliente,
-                        @Param("id_servicio") int id_servicio);
+        @Query(value = "INSERT INTO Usan_servicios (cliente_id,servicio_id) VALUES(:cliente_id,:servicio_id )", nativeQuery = true)
+        void insertarUsan_servicios(@Param("cliente_id") int id_cliente,
+                        @Param("servicio_id") int id_servicio);
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE INTO Usan_servicios (id_cliente,id_servicios) VALUES(hotel_sequence.nextval, :id_cliente,:id_servicios )")
-        void actualizarUsan_servicios(@Param("id_cliente") int id_cliente,
-                        @Param("id_servicio") int id_servicio);
+        @Query(value = "UPDATE Usan_servicios SET cliente_id=:cliente_id_nuevo ,servicio_id=:servicio_id_nuevo WHERE cliente_id = :cliente_id AND servicio_id = :servicio_id", nativeQuery = true)
+        void actualizarUsan_servicios(@Param("cliente_id") int id_cliente,
+                        @Param("servicio_id") int id_servicio,@Param("cliente_id_nuevo") int id_cliente_nuevo,
+                        @Param("servicio_id_nuevo") int id_servicio_nuevo);
 
         @Modifying
         @Transactional
-        @Query(value = "DELETE FROM Usan_servicios WHERE id_cliente = :id_cliente AND id_servicios = :id_servicios", nativeQuery = true)
-        void eliminarUsan_servicios(@Param("id_cliente") int id_cliente,
-                        @Param("id_servicio") int id_servicio);
+        @Query(value = "DELETE FROM Usan_servicios WHERE cliente_id =:cliente_id AND servicio_id =:servicio_id", nativeQuery = true)
+        void eliminarUsan_servicios(@Param("cliente_id") int id_cliente,
+                        @Param("servicio_id") int id_servicio);
 
 }

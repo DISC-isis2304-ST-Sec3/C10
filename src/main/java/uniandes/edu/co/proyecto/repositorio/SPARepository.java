@@ -23,7 +23,7 @@ public interface SPARepository extends JpaRepository<SPA,Integer> {
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO SPA (id,Duracion_min,Tipo,Costo) VALUES(hotel_sequence.nextval,:id, :Duracion_min, :Tipo, :Costo )")
+        @Query(value = "INSERT INTO SPA (id,Duracion_min,Tipo,Costo) VALUES(hotel_sequence.nextval,:id, :Duracion_min, :Tipo, :Costo )", nativeQuery = true)
         void insertarSPA(@Param("id") int id,
                         @Param("Duracion_min") int Duracionmin, 
                         @Param("Tipo") String Tipo,

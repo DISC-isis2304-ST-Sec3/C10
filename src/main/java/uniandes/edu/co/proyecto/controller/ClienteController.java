@@ -22,12 +22,13 @@ public class ClienteController {
 
     @GetMapping("/cliente")
     public String clientes(Model model) {
-      return "clientes";
+        model.addAttribute("cliente", clienteRepository.darClientes());
+      return model.toString();
     }
 
     @GetMapping("/cliente/new")
     public String clienteForm(Model model) {
-        model.addAttribute("clientes", new Cliente());
+        model.addAttribute("cliente", new Cliente());
         return "clienteNuevo";
     }
 
@@ -35,7 +36,7 @@ public class ClienteController {
     public String clienteGuardar(@ModelAttribute Cliente cliente) {
         clienteRepository.insertarCliente( cliente.getId(),
                 cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getId());
-        return "redirect:/clientes";
+        return "redirect:/cliente";
     }
 
     @GetMapping("/cliente/{id}/edit")
@@ -45,7 +46,7 @@ public class ClienteController {
             model.addAttribute("cliente", cliente);
             return "editarCliente";
         } else {
-            return "/redirect:/clientes";
+            return "/redirect:/cliente";
         }
     }
 
@@ -53,13 +54,13 @@ public class ClienteController {
     public String clienteEditarGuardar(@ModelAttribute Cliente cliente, @PathVariable("id") int id) {
         clienteRepository.actualizarCliente(cliente.getId(),
                 cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getId());
-        return "redirect:/clientes";
+        return "redirect:/cliente";
 
     }
 
     @GetMapping("/clientes/{id}/delete")
     public String clienteEliminar(@PathVariable("id") int id) {
         clienteRepository.eliminarCliente(id);
-        return "redirect:/clientes";
+        return "redirect:/cliente";
     }
 }

@@ -27,19 +27,19 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO consumos (id, Fecha,descripcion,precioUnitario,cantidad,total,servicio_id,cliente_id) VALUES(:id, :Fecha, :descripcion, :precioUnitario, :Estado, :Empleado_id,:servicio_id, :cliente_id )")
+        @Query(value = "INSERT INTO consumos (id, Fecha,descripcion,preciounitario,cantidad,total,servicio_id,reserva_id, cliente_id) VALUES(:id, :Fecha, :descripcion, :preciounitario, :cantidad, :total,:servicio_id, :reserva_id, :cliente_id )",nativeQuery = true)
         void insertarConsumo(@Param("id") int id,@Param("Fecha") Date fechaentrada, @Param("descripcion") String descripcion,
-                        @Param("PrecioUnitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
+                        @Param("preciounitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
                         @Param("total") Integer total, @Param("servicio_id") Integer servicio_id,
-                        @Param("numero_reserva") Integer numero_reserva, @Param("Usuario_id") Integer Usuario_id);
+                        @Param("reserva_id") Integer numero_reserva, @Param("cliente_id") Integer Usuario_id);
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE consumos SET Fecha =:Fecha, descripcion=:descripcion, PrecioUnitario=:PrecioUnitario, cantidad=:cantidad, total=:total, servicio_id=:servicio_id, cliente_id =:cliente_id WHERE id =:id", nativeQuery = true)
+        @Query(value = "UPDATE consumos SET Fecha =:Fecha, descripcion=:descripcion, preciounitario=:preciounitario, cantidad=:cantidad, total=:total, servicio_id=:servicio_id, :reserva_id, cliente_id =:cliente_id WHERE id =:id", nativeQuery = true)
         void actualizarConsumo(@Param("id") int id, @Param("Fecha") Date fechaentrada, @Param("descripcion") String descripcion,
-                        @Param("PrecioUnitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
+                        @Param("preciounitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
                         @Param("total") Integer total, @Param("servicio_id") Integer servicio_id,
-                        @Param("numero_reserva") Integer numero_reserva, @Param("cliente_id") Integer Usuario_id);
+                        @Param("reserva_id") Integer numero_reserva, @Param("cliente_id") Integer Usuario_id);
 
         @Modifying
         @Transactional

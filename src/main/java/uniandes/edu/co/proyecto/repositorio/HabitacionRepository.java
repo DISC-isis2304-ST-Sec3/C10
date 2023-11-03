@@ -28,7 +28,7 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO habitaciones (Numero,Tipo,CapacidadMax,Dotacion,Estado,Tarifa,Plandeconsumo_id,Tipo_habitacion_id) VALUES(hotel_sequence.nextval, :Numero,:Tipo,:CapacidadMax,:Dotacion,:Estado,:Tarifa,:PlanDeConsumo_id,:Tipo_habitacion_id )")
+        @Query(value = "INSERT INTO habitaciones (Numero,Tipo,CapacidadMax,Dotacion,Estado,Tarifa,Plandeconsumo_id,Tipo_habitacion_id) VALUES(:Numero,:Tipo,:CapacidadMax,:Dotacion,:Estado,:Tarifa,:Plandeconsumo_id,:Tipo_habitacion_id )",nativeQuery = true)
         void insertarHabitacion(@Param("Numero") int Numero, @Param("Tipo") String Tipo,
                         @Param("CapacidadMax") Integer CapacidadMax, @Param("Dotacion") String Dotacion,
                         @Param("Estado") String estado, @Param("Tarifa") Integer Tarifa,

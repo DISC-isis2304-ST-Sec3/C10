@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 public class Servicio {
     @Id
-    private int id;
+    private Integer id;
     private Date Horario;
     private Integer capacidad;
     private String nombre;

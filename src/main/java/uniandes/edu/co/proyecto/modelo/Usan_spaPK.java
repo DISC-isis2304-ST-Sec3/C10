@@ -8,7 +8,7 @@ import jakarta.persistence.ManyToOne;
 public class Usan_spaPK implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id_SPA",referencedColumnName = "id")
-    private SPA id_Spa;
+    private Servicio id_Spa;
 
     @ManyToOne
     @JoinColumn(name = "id_ReservaSPA",referencedColumnName = "id")
@@ -19,17 +19,17 @@ public class Usan_spaPK implements Serializable {
         super();
     }
 
-    public Usan_spaPK(SPA id_Spa, ReservaSpa id_ReservaSpa) {
+    public Usan_spaPK(Servicio id_Spa, ReservaSpa id_ReservaSpa) {
         super();
         this.id_Spa = id_Spa;
         this.id_ReservaSpa = id_ReservaSpa;
     }
 
-    public SPA getId_Spa() {
+    public Servicio getId_Spa() {
         return id_Spa;
     }
 
-    public void setId_Spa(SPA id_Spa) {
+    public void setId_Spa(Servicio id_Spa) {
         this.id_Spa = id_Spa;
     }
 

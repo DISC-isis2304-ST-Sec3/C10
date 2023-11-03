@@ -20,37 +20,37 @@ public class ServicioController {
     @Autowired
     private ServicioRepository servicioRepository;
 
-    @GetMapping("/servicios")
+    @GetMapping("/servicio")
     public String servicios(Model model) {
         model.addAttribute("servicios", servicioRepository.darServicios());
-        return "servicios";
+        return "servicio";
     }
 
-    @GetMapping("/servicios/new")
+    @GetMapping("/servicio/new")
     public String servicioForm(Model model) {
         model.addAttribute("servicio", new Servicio());
         return "servicioNuevo";
     }
 
-    @PostMapping("/servicios/new/save")
+    @PostMapping("/servicio/new/save")
     public String serviciosGuardar(@ModelAttribute Servicio servicio) {
         servicioRepository.insertarServicio(servicio.getId(), servicio.getNombre(), servicio.getCapacidad(),
                 servicio.getHorario());
-        return "redirect:/servicios";
+        return "redirect:/servicio";
     }
 
-    @GetMapping("/servicios/{id}/edit")
+    @GetMapping("/servicio/{id}/edit")
     public String servicioEditarForm(@PathVariable("id") int id, Model model) {
         Servicio servicio = servicioRepository.darServicio(id);
         if (servicio != null) {
             model.addAttribute("servicio", servicio);
             return "servicioEditar";
         } else {
-            return "/redirect:/servicios";
+            return "/redirect:/servicio";
         }
     }
 
-    @PostMapping("/servicios/{id}/edit/save")
+    @PostMapping("/servicio/{id}/edit/save")
     public String serviciosEditarGuardar(@ModelAttribute Servicio servicio, @PathVariable("id") int id) {
         servicioRepository.actualizarServicio(servicio.getId(), servicio.getNombre(), servicio.getCapacidad(),
                 servicio.getHorario());
@@ -58,10 +58,10 @@ public class ServicioController {
 
     }
 
-    @GetMapping("/servicios/{id}/delete")
+    @GetMapping("/servicio/{id}/delete")
     public String servicioEliminar(@PathVariable("id") int id) {
         servicioRepository.eliminarServicio(id);
 
-        return "redirect:/servicios";
+        return "redirect:/servicio";
     }
 }

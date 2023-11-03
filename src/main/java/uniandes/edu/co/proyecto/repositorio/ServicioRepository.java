@@ -25,19 +25,19 @@ public interface ServicioRepository extends JpaRepository<Servicio, Integer> {
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO servicio (id, nombre, capacidad, Horario) VALUES(hotel_sequence.nextval, :nombre, :capacidad, :horario)")
-        void insertarServicio(@Param("id") int id, @Param("nombre") String nombre, @Param("capacidad") int capacidad,
-                        @Param("Horario") Date Horario);
+        @Query(value = "INSERT INTO servicio (id, nombre, capacidad, horario) VALUES( :id, :nombre, :capacidad, :horario)", nativeQuery = true)
+        void insertarServicio(@Param("id") Integer id, @Param("nombre") String nombre, @Param("capacidad") int capacidad,
+                        @Param("horario") Date Horario);
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE servicio SET id =:id, nombre =:nombre, capacidad=:capacidad, Horario=:Horario WHERE id =:id", nativeQuery = true)
-        void actualizarServicio(@Param("id") int id, @Param("nombre") String nombre, @Param("capacidad") int capacidad,
-                        @Param("Horario") Date Horario);
+        @Query(value = "UPDATE servicio SET id =:id, nombre =:nombre, capacidad=:capacidad, horario=:horario WHERE id =:id", nativeQuery = true)
+        void actualizarServicio(@Param("id") Integer id, @Param("nombre") String nombre, @Param("capacidad") int capacidad,
+                        @Param("horario") Date Horario);
 
         @Modifying
         @Transactional
         @Query(value = "DELETE FROM servicios WHERE id=:id", nativeQuery = true)
-        void eliminarServicio(@Param("id") int id);
+        void eliminarServicio(@Param("id") Integer id);
 
 }

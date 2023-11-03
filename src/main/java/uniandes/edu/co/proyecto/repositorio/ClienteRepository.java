@@ -18,22 +18,22 @@ import uniandes.edu.co.proyecto.modelo.Reserva;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
-        @Query(value = "SELECT.* FROM clientes", nativeQuery = true)
+        @Query(value = "SELECT.* FROM cliente", nativeQuery = true)
         Collection<Cliente> darClientes();
 
-        @Query(value = "SELECT.* FROM clientes WHERE id = :id", nativeQuery = true)
+        @Query(value = "SELECT.* FROM cliente WHERE id = :id", nativeQuery = true)
         Cliente darCliente(@Param("id") Integer id);
  
  
         @Modifying
         @Transactional
-        @Query(value = "UPDATE clientes SET Direccion=:Direccion, Telefono=:Telefono, Plandeconsumo_id=:Plandeconsumo_id WHERE id =:id", nativeQuery = true)
+        @Query(value = "UPDATE cliente SET Direccion=:Direccion, Telefono=:Telefono, Plandeconsumo_id=:Plandeconsumo_id WHERE id =:id", nativeQuery = true)
         void actualizarCliente(@Param("id") Integer id, @Param("Direccion") String Direccion,
                         @Param("Telefono") Integer Telefono,
                         @Param("Plandeconsumo_id") Integer Plandeconsumo_id);
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO clientes (id,Direccion,Telefono,Plandeconsumo_id) VALUES(:id, :Direccion, :Telefono, :Plandeconsumo_id )")
+        @Query(value = "INSERT INTO cliente (id,Direccion,Telefono,Plandeconsumo_id) VALUES(:id, :Direccion, :Telefono, :Plandeconsumo_id )",nativeQuery = true)
         void insertarCliente( @Param("id") Integer id, @Param("Direccion") String Direccion,
                         @Param("Telefono") Integer Telefono,
                         @Param("Plandeconsumo_id") Integer Plandeconsumo_id);
@@ -42,7 +42,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM clientes WHERE id=:id", nativeQuery = true)
+    @Query(value = "DELETE FROM cliente WHERE id=:id", nativeQuery = true)
     void eliminarCliente(@Param("id") Integer id);
 
 }

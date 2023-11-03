@@ -21,26 +21,26 @@ public interface ReservanHabitacionesRepository extends JpaRepository<ReservanHa
         @Query(value = "SELECT.* FROM Reservan_habitaciones", nativeQuery = true)
         Collection<UsanSpa> darReservanHabitacioness();
 
-        @Query(value = "SELECT * FROM Reservan_habitaciones WHERE id_reserva = :id_reserva AND Numero_habitacion = :Numero_habitacion", nativeQuery = true)
-        UsanSpa darReservan_habitaciones(@Param("id_reserva") Integer numReserva,
-                        @Param("Numero_habitacion") Integer Num_habitacion);
+        @Query(value = "SELECT * FROM Reservan_habitaciones WHERE reserva_id = :reserva_id AND habitacion_numero = :habitacion_numero", nativeQuery = true)
+        UsanSpa darReservan_habitaciones(@Param("reserva_id") Integer numReserva,
+                        @Param("habitacion_numero") Integer Num_habitacion);
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO Reservan_habitaciones (id_reserva,Numero_habitacion) VALUES(hotel_sequence.nextval, :id_reserva,:Numero_habitacion )")
-        void insertarReservanHabitaciones(@Param("id_reserva") int numReserva,
-                        @Param("Numero_habitacion") int numHabitacion);
+        @Query(value = "INSERT INTO Reservan_habitaciones (reserva_id,habitacion_numero) VALUES( :reserva_id,:habitacion_numero )", nativeQuery = true)
+        void insertarReservanHabitaciones(@Param("reserva_id") Integer numReserva,
+                        @Param("habitacion_numero") Integer numHabitacion);
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE INTO Reservan_habitaciones (id_reserva,Numero_habitacion) VALUES(hotel_sequence.nextval, :id_reserva,:Numero_habitacion )")
-        void actualizarReservan_habitaciones(@Param("id_reserva") int numReserva,
-                        @Param("Numero_habitacion") int numHabitacion);
+        @Query(value = "UPDATE INTO Reservan_habitaciones (reserva_id,habitacion_numero) VALUES( :reserva_id,:habitacion_numero )", nativeQuery = true)
+        void actualizarReservan_habitaciones(@Param("reserva_id") Integer numReserva,
+                        @Param("habitacion_numero") Integer numHabitacion);
 
         @Modifying
         @Transactional
-        @Query(value = "DELETE FROM Reservan_habitaciones WHERE id_reserva = :id_reserva AND Numero_habitacion = :Numero_habitacion", nativeQuery = true)
-        void eliminarReservan_habitaciones(@Param("id_reserva") int numReserva,
-                        @Param("Numero_habitacion") int numHabitacion);
+        @Query(value = "DELETE FROM Reservan_habitaciones WHERE reserva_id = :reserva_id AND habitacion_numero = :habitacion_numero", nativeQuery = true)
+        void eliminarReservan_habitaciones(@Param("reserva_id") Integer numReserva,
+                        @Param("habitacion_numero") Integer numHabitacion);
 
 }

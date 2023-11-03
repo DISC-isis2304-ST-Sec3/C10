@@ -24,7 +24,7 @@ public interface UsuarioRepository {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO usuarios (Nombre_2,Apellido,Tipo_usuario_id) VALUES(hotel_sequence.nextval, :Nombre_2, :Apellido, :Tipo_usuario_id )")
+    @Query(value = "INSERT INTO usuarios (Nombre_2,Apellido,Tipo_usuario_id) VALUES(hotel_sequence.nextval, :Nombre_2, :Apellido, :Tipo_usuario_id )", nativeQuery = true)
     void insertarUsuario(@Param("Nombre_2") String Nombre_2, @Param("Apellido") String Apellido,
             @Param("Tipo_usuario_id") Integer Tipo);
 
