@@ -15,20 +15,11 @@ import uniandes.edu.co.proyecto.repositorio.ServicioRepository;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "uniandes.edu.co.protecto.controller")
-public class ProyectoApplication implements CommandLineRunner {
-	@Autowired private ClienteRepository clienteRepository;
+public class ProyectoApplication {
+	@Autowired
+	private ClienteRepository clienteRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoApplication.class, args);
 	}
-
-	@Override
-	public void run(String ... arg){
-		Collection<Cliente> servicios = clienteRepository.darClientes();
-		for (Cliente s: servicios)
-		{
-			System.out.println(s);
-		}
-	}
-
 }
