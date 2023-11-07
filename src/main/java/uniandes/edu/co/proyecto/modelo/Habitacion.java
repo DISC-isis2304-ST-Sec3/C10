@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
 @Entity
 @Table(name = "habitacion")
 
@@ -23,13 +24,14 @@ public class Habitacion {
 
     @ManyToOne
     @JoinColumn(name = "Tipo_habitacion", referencedColumnName = "id")
-    public Tipo_habitacion tipo_habitacion;
+    public TipoHabitacion tipo_habitacion;
 
     public Habitacion() {
         ;
     }
 
-    public Habitacion(Integer numero, String tipo, Integer capacidadMax, String dotacion, Integer tarifa, PlanDeConsumo planDeConsumo, Tipo_habitacion tipo_habitacion) {
+    public Habitacion(Integer numero, String tipo, Integer capacidadMax, String dotacion, Integer tarifa,
+            PlanDeConsumo planDeConsumo, TipoHabitacion tipo_habitacion) {
         Numero = numero;
         Tipo = tipo;
         CapacidadMax = capacidadMax;
@@ -95,14 +97,12 @@ public class Habitacion {
         this.planDeConsumo = planDeConsumo;
     }
 
-    public Tipo_habitacion getTipo_habitacion() {
+    public TipoHabitacion getTipo_habitacion() {
         return tipo_habitacion;
     }
 
-    public void setTipo_habitacion(Tipo_habitacion tipo_habitacion) {
+    public void setTipo_habitacion(TipoHabitacion tipo_habitacion) {
         this.tipo_habitacion = tipo_habitacion;
     }
-
-    
 
 }

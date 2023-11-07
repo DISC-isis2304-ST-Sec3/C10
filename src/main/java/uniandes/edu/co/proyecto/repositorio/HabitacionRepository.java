@@ -13,10 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 import uniandes.edu.co.proyecto.modelo.Habitacion;
 import uniandes.edu.co.proyecto.modelo.PlanDeConsumo;
 import uniandes.edu.co.proyecto.modelo.Reserva;
-import uniandes.edu.co.proyecto.modelo.Tipo_habitacion;
+import uniandes.edu.co.proyecto.modelo.TipoHabitacion;
 
 @Repository
-
 
 public interface HabitacionRepository extends JpaRepository<Habitacion, Integer> {
 
@@ -28,11 +27,12 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
 
         @Modifying
         @Transactional
-        @Query(value = "INSERT INTO habitaciones (Numero,Tipo,CapacidadMax,Dotacion,Estado,Tarifa,Plandeconsumo_id,Tipo_habitacion_id) VALUES(:Numero,:Tipo,:CapacidadMax,:Dotacion,:Estado,:Tarifa,:Plandeconsumo_id,:Tipo_habitacion_id )",nativeQuery = true)
+        @Query(value = "INSERT INTO habitaciones (Numero,Tipo,CapacidadMax,Dotacion,Estado,Tarifa,Plandeconsumo_id,Tipo_habitacion_id) VALUES(:Numero,:Tipo,:CapacidadMax,:Dotacion,:Estado,:Tarifa,:Plandeconsumo_id,:Tipo_habitacion_id )", nativeQuery = true)
         void insertarHabitacion(@Param("Numero") int Numero, @Param("Tipo") String Tipo,
                         @Param("CapacidadMax") Integer CapacidadMax, @Param("Dotacion") String Dotacion,
                         @Param("Estado") String estado, @Param("Tarifa") Integer Tarifa,
-                        @Param("Plandeconsumo_id") Integer Plandeconsumo_id, @Param("Tipo_habitacion_id") String tipo_habitacion_id);
+                        @Param("Plandeconsumo_id") Integer Plandeconsumo_id,
+                        @Param("Tipo_habitacion_id") String tipo_habitacion_id);
 
         @Modifying
         @Transactional
@@ -40,7 +40,8 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
         void actualizarHabitacion(@Param("Numero") int Numero, @Param("Tipo") String Tipo,
                         @Param("CapacidadMax") Integer CapacidadMax, @Param("Dotacion") String Dotacion,
                         @Param("Estado") String estado, @Param("Tarifa") Integer Tarifa,
-                        @Param("Plandeconsumo_id") Integer Plandeconsumo_id, @Param("Tipo_habitacion_id") String tipo_habitacion_id);
+                        @Param("Plandeconsumo_id") Integer Plandeconsumo_id,
+                        @Param("Tipo_habitacion_id") String tipo_habitacion_id);
 
         @Modifying
         @Transactional

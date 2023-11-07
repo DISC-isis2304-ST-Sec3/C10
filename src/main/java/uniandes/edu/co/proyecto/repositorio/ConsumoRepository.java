@@ -20,7 +20,7 @@ import uniandes.edu.co.proyecto.modelo.Usuario;
 public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
         @Query(value = "SELECT.* FROM consumos", nativeQuery = true)
-        Collection<Consumo> darConsumos();
+        Collection<Reserva> darConsumos();
 
         @Query(value = "SELECT.* FROM consumos WHERE id = :id", nativeQuery = true)
         Consumo darConsumo(@Param("id") int id);
@@ -35,7 +35,7 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
         @Modifying
         @Transactional
-        @Query(value = "UPDATE consumos SET Fecha =:Fecha, descripcion=:descripcion, preciounitario=:preciounitario, cantidad=:cantidad, total=:total, servicio_id=:servicio_id, reserva_id=:reserva_id, cliente_id =:cliente_id WHERE id =:id", nativeQuery = true)
+        @Query(value = "UPDATE consumos SET Fecha =:Fecha, descripcion=:descripcion, preciounitario=:preciounitario, cantidad=:cantidad, total=:total, servicio_id=:servicio_id, :reserva_id, cliente_id =:cliente_id WHERE id =:id", nativeQuery = true)
         void actualizarConsumo(@Param("id") int id, @Param("Fecha") Date fechaentrada, @Param("descripcion") String descripcion,
                         @Param("preciounitario") Integer precioUnitario, @Param("cantidad") Integer cantidad,
                         @Param("total") Integer total, @Param("servicio_id") Integer servicio_id,

@@ -10,25 +10,24 @@ import jakarta.persistence.Table;
 @Table(name = "TipoUsuario")
 public class TipoUsuario {
     @Id
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     private String nombre;
-    private String descripcion;
-    public TipoUsuario(Integer id,String nombre, String descripcion) {
+
+    public TipoUsuario(String nombre, String descripcion) {
         this.nombre = nombre;
-        this.id = id;
-        this.descripcion = descripcion;
     }
 
     public TipoUsuario() {
         ;
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -38,13 +37,5 @@ public class TipoUsuario {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
     }
 }

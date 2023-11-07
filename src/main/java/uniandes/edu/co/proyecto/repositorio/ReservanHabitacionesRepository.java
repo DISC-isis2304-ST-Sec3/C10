@@ -19,10 +19,10 @@ import uniandes.edu.co.proyecto.modelo.UsanSpa;
 public interface ReservanHabitacionesRepository extends JpaRepository<ReservanHabitaciones, Integer> {
 
         @Query(value = "SELECT.* FROM Reservan_habitaciones", nativeQuery = true)
-        Collection<ReservanHabitaciones> darReservanHabitacioness();
+        Collection<UsanSpa> darReservanHabitacioness();
 
         @Query(value = "SELECT * FROM Reservan_habitaciones WHERE reserva_id = :reserva_id AND habitacion_numero = :habitacion_numero", nativeQuery = true)
-        ReservanHabitaciones darReservan_habitaciones(@Param("reserva_id") Integer numReserva,
+        UsanSpa darReservan_habitaciones(@Param("reserva_id") Integer numReserva,
                         @Param("habitacion_numero") Integer Num_habitacion);
 
         @Modifying

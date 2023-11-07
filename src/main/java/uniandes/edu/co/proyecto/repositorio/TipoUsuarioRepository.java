@@ -13,7 +13,6 @@ import uniandes.edu.co.proyecto.modelo.TipoUsuario;
 public interface TipoUsuarioRepository extends JpaRepository<TipoUsuario, Integer> {
     @Modifying
     @Transactional
-    @Query("INSERT INTO TipoUsuario (id, nombre, descripcion) VALUES(:id, :nombre, :descripcion)")
-    void insertarTipoUsuario(@Param("id") Integer id, @Param("nombre") String nombre,
-            @Param("descripcion") String descripcion);
+    @Query("INSERT INTO TipoUsuario (id, nombre) VALUES(:id, :nombre)")
+    void insertarTipoUsuario(@Param("id") long id, @Param("nombre") String nombre);
 }
