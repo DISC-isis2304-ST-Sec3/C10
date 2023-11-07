@@ -11,13 +11,13 @@ import jakarta.persistence.Table;
 
 public class Tipo_usuario {
      @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String nombre;
     private String descripcion;
-    public Tipo_usuario(String nombre, String descripcion) {
+    public Tipo_usuario(Integer id,String nombre, String descripcion) {
         this.nombre = nombre;
+        this.id = id;
         this.descripcion = descripcion;
     }
     public Integer getId() {
