@@ -17,13 +17,11 @@ import uniandes.edu.co.proyecto.repositorio.ReservaRepository;
 public class ClienteController {
     @Autowired
     private ClienteRepository clienteRepository;
-    @Autowired
-
 
     @GetMapping("/cliente")
     public String clientes(Model model) {
         model.addAttribute("cliente", clienteRepository.darClientes());
-      return model.toString();
+        return model.toString();
     }
 
     @GetMapping("/cliente/new")
@@ -34,7 +32,7 @@ public class ClienteController {
 
     @PostMapping("/cliente/new/save")
     public String clienteGuardar(@ModelAttribute Cliente cliente) {
-        clienteRepository.insertarCliente( cliente.getId(),
+        clienteRepository.insertarCliente(cliente.getId(),
                 cliente.getDireccion(), cliente.getTelefono(), cliente.getPlandeconsumoactual().getId());
         return "redirect:/cliente";
     }

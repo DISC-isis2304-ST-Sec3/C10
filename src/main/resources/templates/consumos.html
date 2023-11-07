@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Andes</title>
+    <title>Consumos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
@@ -21,16 +21,33 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px; /* Adjust margin top accordingly */
         }
 
-        img {
-            width: 250px;
+        h1 {
+            color: #7e57c2; /* Purple color */
+        }
+
+        table {
+            width: 100%;
             margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
         }
 
         .btn-primary {
             background-color: #7e57c2;
             border-color: #7e57c2;
+            margin: 5px 0;
         }
 
         .btn-primary:hover {
@@ -46,21 +63,29 @@
 
 <body>
     <div class="container">
-        <img src="images/HotelAndes.png" width="250">
-
+        <h1>Consumos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Descripción</th>
+                    <th>Precio Unitario</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Servicio ID</th>
+                    <th>Reserva ID</th>
+                    <th>Cliente ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add your Thymeleaf code here -->
+            </tbody>
+        </table>
         <div>
-            <a href="/hotel/clientes" class="btn btn-primary">Clientes</a>
-            <a href="/hotel/consumos" class="btn btn-primary">Consumos</a>
-            <a href="/hotel/habitaciones" class="btn btn-primary">Habitaciones</a>
-            <a href="/hotel/servicios" class="btn btn-primary">Servicios</a>
-            <a href="/hotel/reservas" class="btn btn-primary">Reservas</a>
-            <a href="/hotel/planesdeconsumo" class="btn btn-primary">PlanesdeConsumo</a>
+            <a href="/hotel" class="btn btn-primary">Volver atrás</a>
         </div>
-        <br />
-
     </div>
-
-
 </body>
 
 </html>

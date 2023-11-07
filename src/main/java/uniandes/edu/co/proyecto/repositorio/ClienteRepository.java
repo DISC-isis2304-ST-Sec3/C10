@@ -10,7 +10,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-
 import uniandes.edu.co.proyecto.modelo.Cliente;
 import uniandes.edu.co.proyecto.modelo.Reserva;
 
@@ -18,31 +17,29 @@ import uniandes.edu.co.proyecto.modelo.Reserva;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
-        @Query(value = "SELECT.* FROM cliente", nativeQuery = true)
-        Collection<Cliente> darClientes();
+    @Query("SELECT c FROM Cliente c")
+    Collection<Cliente> darClientes();
 
-        @Query(value = "SELECT.* FROM cliente WHERE id = :id", nativeQuery = true)
-        Cliente darCliente(@Param("id") Integer id);
- 
- 
-        @Modifying
-        @Transactional
-        @Query(value = "UPDATE cliente SET Direccion=:Direccion, Telefono=:Telefono, Plandeconsumo_id=:Plandeconsumo_id WHERE id =:id", nativeQuery = true)
-        void actualizarCliente(@Param("id") Integer id, @Param("Direccion") String Direccion,
-                        @Param("Telefono") Integer Telefono,
-                        @Param("Plandeconsumo_id") Integer Plandeconsumo_id);
-        @Modifying
-        @Transactional
-        @Query(value = "INSERT INTO cliente (id,Direccion,Telefono,Plandeconsumo_id) VALUES(:id, :Direccion, :Telefono, :Plandeconsumo_id )",nativeQuery = true)
-        void insertarCliente( @Param("id") Integer id, @Param("Direccion") String Direccion,
-                        @Param("Telefono") Integer Telefono,
-                        @Param("Plandeconsumo_id") Integer Plandeconsumo_id);
-
-       
+    @Query("SELECT c FROM Cliente c WHERE c.id = :id")
+    Cliente darCliente(@Param("id") Integer id);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM cliente WHERE id=:id", nativeQuery = true)
+    @Query("UPDATE Cliente c SET c.Direccion = :Direccion, c.Telefono = :Telefono, c.planDeconsumo.id = :Plandeconsumo_id WHERE c.id = :id")
+    void actualizarCliente(@Param("id") Integer id, @Param("Direccion") String Direccion,
+            @Param("Telefono") Integer Telefono,
+            @Param("Plandeconsumo_id") Integer Plandeconsumo_id);
+
+    @Modifying
+    @Transactional
+    @Query("INSERT INTO Cliente (id, Direccion, Telefono, planDeconsumo.id) VALUES(:id, :Direccion, :Telefono, :Plandeconsumo_id )")
+    void insertarCliente(@Param("id") Integer id, @Param("Direccion") String Direccion,
+            @Param("Telefono") Integer Telefono,
+            @Param("Plandeconsumo_id") Integer Plandeconsumo_id);
+
+    @Modifying
+    @Transactional
+    @Query("DELETE FROM Cliente c WHERE c.id = :id")
     void eliminarCliente(@Param("id") Integer id);
 
 }
