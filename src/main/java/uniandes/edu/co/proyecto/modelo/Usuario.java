@@ -14,8 +14,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "usuario")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipouser", discriminatorType = DiscriminatorType.STRING )
 
 public class Usuario {
 
@@ -23,14 +21,10 @@ public class Usuario {
     private Integer id;
     private String Nombre;
     private String Apellido;
-    
+
     @ManyToOne
-    @JoinColumn(name = "Tipo_usuario",referencedColumnName = "id")
+    @JoinColumn(name = "Tipo_usuario", referencedColumnName = "id")
     private Tipo_usuario tipousuarioid;
-
-    
-
-    
 
     public Usuario(Integer id, String nombre, String apellido, Tipo_usuario tipousuarioid) {
         this.id = id;
@@ -39,8 +33,9 @@ public class Usuario {
         this.tipousuarioid = tipousuarioid;
     }
 
-    public Usuario()
-    {;}
+    public Usuario() {
+        ;
+    }
 
     public Integer getId() {
         return id;
@@ -66,9 +61,6 @@ public class Usuario {
         Apellido = apellido;
     }
 
-
-    
-
     public Tipo_usuario getTipousuarioid() {
         return tipousuarioid;
     }
@@ -77,10 +69,4 @@ public class Usuario {
         this.tipousuarioid = tipousuarioid;
     }
 
-    
-
-
-
-    
-    
 }

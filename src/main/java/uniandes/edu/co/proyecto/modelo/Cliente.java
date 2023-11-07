@@ -8,9 +8,7 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="cliente")
-
-
+@Table(name = "cliente")
 
 public class Cliente extends Usuario {
 
@@ -19,16 +17,14 @@ public class Cliente extends Usuario {
 
     @ManyToOne
     @JoinColumn(name = "PlanDeConsumo", referencedColumnName = "id")
-    private PlanDeConsumo Plandeconsumoactual;
-
-    
+    private PlanDeConsumo planDeconsumo;
 
     public Cliente(String direccion, Integer telefono,
             PlanDeConsumo plandeconsumoactual) {
         super();
         Direccion = direccion;
         Telefono = telefono;
-        Plandeconsumoactual = plandeconsumoactual;
+        planDeconsumo = plandeconsumoactual;
     }
 
     public Cliente() {
@@ -52,11 +48,11 @@ public class Cliente extends Usuario {
     }
 
     public PlanDeConsumo getPlandeconsumoactual() {
-        return Plandeconsumoactual;
+        return planDeconsumo;
     }
 
     public void setPlandeconsumoactual(PlanDeConsumo plandeconsumoactual) {
-        Plandeconsumoactual = plandeconsumoactual;
+        planDeconsumo = plandeconsumoactual;
     }
 
 }
