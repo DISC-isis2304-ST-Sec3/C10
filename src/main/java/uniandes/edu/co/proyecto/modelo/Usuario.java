@@ -24,9 +24,9 @@ public class Usuario {
 
     @ManyToOne
     @JoinColumn(name = "Tipo_usuario", referencedColumnName = "id")
-    private Tipo_usuario tipousuarioid;
+    private TipoUsuario tipousuarioid;
 
-    public Usuario(Integer id, String nombre, String apellido, Tipo_usuario tipousuarioid) {
+    public Usuario(Integer id, String nombre, String apellido, TipoUsuario tipousuarioid) {
         this.id = id;
         Nombre = nombre;
         Apellido = apellido;
@@ -61,11 +61,11 @@ public class Usuario {
         Apellido = apellido;
     }
 
-    public Tipo_usuario getTipousuarioid() {
+    public TipoUsuario getTipousuarioid() {
         return tipousuarioid;
     }
 
-    public void setTipousuarioid(Tipo_usuario tipousuarioid) {
+    public void setTipousuarioid(TipoUsuario tipousuarioid) {
         this.tipousuarioid = tipousuarioid;
     }
 
