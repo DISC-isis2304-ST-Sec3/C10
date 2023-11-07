@@ -9,7 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "uniandes.edu.co.proyecto.controller")
+@ComponentScan(basePackages = { "uniandes.edu.co.proyecto.controller", "uniandes.edu.co.proyecto.repositorio",
+		"uniandes.edu.co.proyecto.modelo" })
 public class ProyectoApplication {
 
 	public static void main(String[] args) {
