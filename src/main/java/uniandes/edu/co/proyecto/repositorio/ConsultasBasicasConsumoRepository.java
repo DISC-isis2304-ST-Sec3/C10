@@ -23,4 +23,9 @@ public interface ConsultasBasicasConsumoRepository extends JpaRepository<Consumo
         List<Integer> findServicioIdsByFechaAndPrecioUnitario(@Param("startDate") Date startDate,
                         @Param("endDate") Date endDate, @Param("precioUnitario") int precioUnitario);
 
+        @Query("SELECT c.id, c.descripcion, c.total, c.usuarioid.id, c.servicio.id " +
+                        "FROM Consumo c " +
+                        "WHERE (c.usuarioid.id = ?1) AND (c.fecha BETWEEN ?2 AND ?3)")
+        List<Object[]> findConsumoByClienteIdAndFechaBetween(Long clienteId, Date startDate, Date endDate);
+
 }

@@ -55,7 +55,7 @@ public class ConsultasBasicasController {
     }
 
     @GetMapping("/req4Form")
-    public String openReq4() {
+    public String openReq4Form() {
         return "req4Form";
     }
 
@@ -75,6 +75,31 @@ public class ConsultasBasicasController {
                 .findServicioIdsByFechaAndPrecioUnitario(parsedStartDate, parsedEndDate, precio);
         model.addAttribute("servicioIds", servicioIds);
         return "req4";
+    }
+
+    @GetMapping("/req5Form")
+    public String openReq5Form() {
+        return "req5Form";
+    }
+
+    @PostMapping("/req5")
+    public String openReq4(@RequestParam("clientId") Long clientId,
+            @RequestParam("startDate") String startDate,
+            @RequestParam("endDate") String endDate, Model model) {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
+        Date parsedStartDate = null;
+        Date parsedEndDate = null;
+        try {
+            parsedStartDate = formatter.parse(startDate);
+            parsedEndDate = formatter.parse(endDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        List<Object[]> consumos = consultasBasicasConsumoRepository.findConsumoByClienteIdAndFechaBetween(clientId,
+                parsedStartDate,
+                parsedEndDate);
+        model.addAttribute("consumos", consumos);
+        return "req5";
     }
 
 }
