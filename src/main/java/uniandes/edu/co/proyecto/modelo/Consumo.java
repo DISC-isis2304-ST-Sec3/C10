@@ -1,7 +1,7 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import java.sql.Date;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,7 +16,10 @@ public class Consumo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private Date Fecha;
+
+    @Column(name = "fecha")
+    private Date fecha;
+
     private String descripcion;
     private Integer precioUnitario;
     private Integer cantidad;
@@ -24,10 +27,10 @@ public class Consumo {
 
     @ManyToOne
     @JoinColumn(name = "servicio_id", referencedColumnName = "id")
-    private Servicio servicioID;
+    private Servicio servicio;
 
     @ManyToOne
-    @JoinColumn(name = "id_Reserva", referencedColumnName = "id")
+    @JoinColumn(name = "reserva_id", referencedColumnName = "id")
     private Reserva numeroReserva;
 
     @ManyToOne
@@ -35,13 +38,13 @@ public class Consumo {
     private Usuario usuarioid;
 
     public Consumo(Date fecha, String descripcion, Integer precioUnitario, Integer cantidad, Integer total,
-            Servicio servicioID, Reserva numeroReserva, Usuario usuarioid) {
-        Fecha = fecha;
+            Servicio servicio, Reserva numeroReserva, Usuario usuarioid) {
+        this.fecha = fecha;
         this.descripcion = descripcion;
         this.precioUnitario = precioUnitario;
         this.cantidad = cantidad;
         this.total = total;
-        this.servicioID = servicioID;
+        this.servicio = servicio;
         this.numeroReserva = numeroReserva;
         this.usuarioid = usuarioid;
     }
@@ -59,11 +62,11 @@ public class Consumo {
     }
 
     public Date getFecha() {
-        return Fecha;
+        return fecha;
     }
 
     public void setFecha(Date fecha) {
-        Fecha = fecha;
+        this.fecha = fecha;
     }
 
     public String getDescripcion() {
@@ -106,12 +109,12 @@ public class Consumo {
         this.usuarioid = usuarioid;
     }
 
-    public Servicio getServicioID() {
-        return servicioID;
+    public Servicio getServicio() {
+        return servicio;
     }
 
-    public void setServicioID(Servicio servicioID) {
-        this.servicioID = servicioID;
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
     }
 
     public Reserva getNumeroReserva() {
@@ -121,5 +124,4 @@ public class Consumo {
     public void setNumeroReserva(Reserva numeroReserva) {
         this.numeroReserva = numeroReserva;
     }
-
 }
