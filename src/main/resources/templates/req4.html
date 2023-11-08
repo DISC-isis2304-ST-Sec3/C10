@@ -34,7 +34,8 @@
             margin-top: 20px;
         }
 
-        td, th {
+        td,
+        th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 5px; /* Adjusted padding */
@@ -54,12 +55,10 @@
             <tr>
                 <th>Num</th>
                 <th>Servicio ID</th>
-                <th>Número de consumos</th>
             </tr>
             <tr th:each="row, stat : ${result}" th:if="${stat.index} lt 20">
                 <td th:text="${stat.index + 1}"></td>
                 <td th:text="${row[0]}"></td>
-                <td th:text="${row[1]}"></td>
             </tr>
         </table>
     </div>

@@ -10,9 +10,8 @@ public class ReservanHabitaciones {
     @EmbeddedId
     private ReservanHabitacionesPK pk;
 
-    public ReservanHabitaciones(Reserva Numero_reserva,Habitacion Numero_habitacion)
-    {
-        this.pk=new ReservanHabitacionesPK(Numero_reserva, Numero_habitacion);
+    public ReservanHabitaciones(Reserva Numero_reserva, Habitacion Numero_habitacion) {
+        this.pk = new ReservanHabitacionesPK(Numero_reserva, Numero_habitacion);
     }
 
     public ReservanHabitaciones() {
@@ -27,7 +26,4 @@ public class ReservanHabitaciones {
         this.pk = pk;
     }
 
-    
-
-    
 }

@@ -21,7 +21,10 @@ public class Consumo {
     private Date fecha;
 
     private String descripcion;
+
+    @Column(name = "preciounitario")
     private Integer precioUnitario;
+
     private Integer cantidad;
     private Integer total;
 

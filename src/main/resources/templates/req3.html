@@ -52,13 +52,11 @@
         <h2>Servicios más consumidos</h2>
         <table>
             <tr>
-                <th>Num</th>
-                <th>Servicio ID</th>
-                <th>Número de consumos</th>
+                <th>Número de habitación</th>
+                <th>Porcentaje</th>
             </tr>
             <tr th:each="row, stat : ${result}" th:if="${stat.index} lt 20">
                 <td th:text="${stat.index + 1}"></td>
-                <td th:text="${row[0]}"></td>
                 <td th:text="${row[1]}"></td>
             </tr>
         </table>

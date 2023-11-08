@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import uniandes.edu.co.proyecto.repositorio.ConsultasBasicasRepository;
+import uniandes.edu.co.proyecto.repositorio.ConsultasBasicasConsumoRepository;
 
 @Controller
 public class ConsultasBasicasController {
     @Autowired
-    private ConsultasBasicasRepository consultasBasicasRepository;
+    private ConsultasBasicasConsumoRepository consultasBasicasConsumoRepository;
 
     @GetMapping("/consultasbasicas")
     public String consultasbasicas() {
@@ -38,9 +38,43 @@ public class ConsultasBasicasController {
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yy");
         Date parsedStartDate = format.parse(startDate);
         Date parsedEndDate = format.parse(endDate);
-        List<Object[]> result = consultasBasicasRepository.findConsumoByDateRange(parsedStartDate, parsedEndDate);
+        List<Object[]> result = consultasBasicasConsumoRepository.findConsumoByDateRange(parsedStartDate,
+                parsedEndDate);
         model.addAttribute("result", result);
         return "req2";
+    }
+
+    @GetMapping("/req3Form")
+    public String openReq3Page() {
+        return "req3Form";
+    }
+
+    @PostMapping("/req3")
+    public String openReq3() {
+        return "req3";
+    }
+
+    @GetMapping("/req4Form")
+    public String openReq4() {
+        return "req4Form";
+    }
+
+    @PostMapping("/req4")
+    public String openReq4(@RequestParam("precio") int precio, @RequestParam("startDate") String startDate,
+            @RequestParam("endDate") String endDate, Model model) {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
+        Date parsedStartDate = null;
+        Date parsedEndDate = null;
+        try {
+            parsedStartDate = formatter.parse(startDate);
+            parsedEndDate = formatter.parse(endDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        List<Integer> servicioIds = consultasBasicasConsumoRepository
+                .findServicioIdsByFechaAndPrecioUnitario(parsedStartDate, parsedEndDate, precio);
+        model.addAttribute("servicioIds", servicioIds);
+        return "req4";
     }
 
 }
