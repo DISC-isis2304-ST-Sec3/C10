@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #800080;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #800080; 
+            color: white;
+        }
+
+        .acciones-column button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .form-row,
+        .form-row-update,
+        .form-row-delete {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Lista de Clientes</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha Llegada</th>
+                    <th>Acciones</th> 
+                </tr>
+            </thead>
+            <tbody th:each="cliente : ${clientes}">
+                <tr>
+                    <td th:text="${cliente.id}"></td>
+                    <td th:text="${cliente.nombre}"></td>
+                    <td th:text="${cliente.apellido}"></td>
+                    <td>
+                        <ul>
+                            <li th:each="fecha, fechaStat : ${cliente.fechaSalida}">
+                                <span th:text="${#dates.format(fecha, 'yyyy-MM-dd')}"></span>
+                                <button th:data-clienteId="${cliente.id}" th:data-fechaIndex="${fechaStat.index}" onclick="handleUpdateButton(this)">U</button>
+                                <form th:action="@{/salidaClientes/updateFecha}" method="post" class="form-row-update" style="display: none;">
+                                    <input type="hidden" name="clienteId" th:value="${cliente.id}" />
+                                    <input type="hidden" name="fechaIndex" th:value="${fechaStat.index}" />
+                                    <label for="nuevaFecha">Nueva Fecha:</label>
+                                    <input type="date" id="nuevaFecha" name="nuevaFecha" th:value="${#dates.format(fecha, 'yyyy-MM-dd')}" required />
+                                    <input type="submit" value="Actualizar Fecha">
+                                </form>
+                                <button th:data-clienteId="${cliente.id}" th:data-fechaIndex="${fechaStat.index}" onclick="handleDeleteButton(this)">D</button>
+                                <form th:action="@{/salidaClientes/deleteFecha}" method="post" class="form-row-delete" style="display: none;">
+                                    <input type="hidden" name="clienteId" th:value="${cliente.id}" />
+                                    <input type="hidden" name="fechaIndex" th:value="${fechaStat.index}" />
+                                </form>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="acciones-column">
+                        <button th:data-clienteId="${cliente.id}" onclick="handleCreateButton(this)">C</button>
+                        <form th:action="@{/salidaClientes/createFecha}" method="post" class="form-row" style="display: none;">
+                            <input type="hidden" name="clienteId" th:value="${cliente.id}" />
+                            <label for="nuevaFecha">Nueva Fecha:</label>
+                            <input type="date" id="nuevaFecha" name="nuevaFecha" required />
+                            <input type="submit" value="Agregar Fecha">
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function handleCreateButton(button) {
+            var formRow = button.nextElementSibling;
+            formRow.style.display = (formRow.style.display === 'none' || formRow.style.display === '') ? 'table-row' : 'none';
+        }
+    
+        function handleUpdateButton(button) {
+            var formRowUpdate = button.nextElementSibling;
+            formRowUpdate.style.display = (formRowUpdate.style.display === 'none' || formRowUpdate.style.display === '') ? 'table-row' : 'none';
+        }
+        function handleDeleteButton(button) {
+            if (true) {
+                var clienteId = button.getAttribute('data-clienteId');
+                var fechaIndex = button.getAttribute('data-fechaIndex');
+    
+                fetch('/salidaClientes/deleteFecha', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'clienteId=' + clienteId + '&fechaIndex=' + fechaIndex,
+                })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.reload();
+                    } else {
+                        console.error('Error deleting data');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        }
+    </script>
+    
+    
+
+</body>
+
+</html>
