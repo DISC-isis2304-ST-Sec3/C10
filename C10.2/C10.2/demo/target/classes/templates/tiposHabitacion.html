@@ -17,6 +17,11 @@
             height: 100vh;
         }
 
+        .scrollable-container {
+            max-height: 500px; /* Set the desired height */
+            overflow-y: auto;
+        }
+
         .container {
             text-align: center;
             background-color: #fff;
@@ -66,20 +71,21 @@
 
 <body>
 
-    <div class="container">
-        <h1>Tipos de Habitación</h1>
+    <div class="scrollable-container">
+        <div class="container">
+            <h1>Tipos de Habitación</h1>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Número</th>
-                    <th>Tipo</th>
-                    <th>Acciones</th>
-                    <th>
-                        <button onclick="handleCreateButton()">C</button>
-                    </th>
-                </tr>
-            </thead>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Tipo</th>
+                        <th>Acciones</th>
+                        <th>
+                            <button onclick="handleCreateButton()">C</button>
+                        </th>
+                    </tr>
+                </thead>
             <tbody>
                 <tr th:each="tipo, iterStat : ${tipos}">
                     <td th:text="${iterStat.count}">1</td>

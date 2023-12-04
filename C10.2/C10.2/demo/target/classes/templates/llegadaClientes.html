@@ -23,6 +23,8 @@
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: auto; /* Make the container scrollable */
+            max-height: 70vh; /* Set a maximum height for the container */
         }
 
         h1 {
@@ -80,6 +82,9 @@
                     <th>Apellido</th>
                     <th>Fecha Llegada</th>
                     <th>Acciones</th> 
+                    <th>
+                        <button onclick="handleCreateButton()">C</button>
+                    </th>
                 </tr>
             </thead>
             <tbody th:each="cliente : ${clientes}">
@@ -87,37 +92,31 @@
                     <td th:text="${cliente.id}"></td>
                     <td th:text="${cliente.nombre}"></td>
                     <td th:text="${cliente.apellido}"></td>
+                    <td th:text="${cliente.fechaLlegada}"></td>
+                    <td class="acciones-column">
+                        <button th:data-reserva-id="${cliente.id}" onclick="handleButtonClick(this)">U</button>
+                        <button th:data-reserva-id="${cliente.id}" onclick="handleDeleteButton(this)">D</button>
+    
+                    </td>
+                    
                     <td>
                         <ul>
-                            <!-- Loop through each fecha for the client -->
                             <li th:each="fecha, fechaStat : ${cliente.fechaLlegada}">
-                                <span th:text="${#dates.format(fecha, 'yyyy-MM-dd')}"></span>
-                                <!-- Button and form for updating each fecha -->
+                                <!-- Your existing date elements -->
                                 <button th:data-clienteId="${cliente.id}" th:data-fechaIndex="${fechaStat.index}" onclick="handleUpdateButton(this)">U</button>
-                                <form th:action="@{/llegadaClientes/updateFecha}" method="post" class="form-row-update" style="display: none;">
-                                    <input type="hidden" name="clienteId" th:value="${cliente.id}" />
-                                    <input type="hidden" name="fechaIndex" th:value="${fechaStat.index}" />
-                                    <label for="nuevaFecha">Nueva Fecha:</label>
-                                    <input type="date" id="nuevaFecha" name="nuevaFecha" th:value="${#dates.format(fecha, 'yyyy-MM-dd')}" required />
-                                    <input type="submit" value="Actualizar Fecha">
+                                <form th:action="@{/llegadaClientes/updateFecha}" method="post" th:classappend="${'form-row-update-' + cliente.id + '-' + fechaStat.index}">
+                                    <!-- Your existing update form elements -->
                                 </form>
-                                <!-- Button and form for deleting each fecha -->
                                 <button th:data-clienteId="${cliente.id}" th:data-fechaIndex="${fechaStat.index}" onclick="handleDeleteButton(this)">D</button>
-                                <form th:action="@{/llegadaClientes/deleteFecha}" method="post" class="form-row-delete" style="display: none;">
-                                    <input type="hidden" name="clienteId" th:value="${cliente.id}" />
-                                    <input type="hidden" name="fechaIndex" th:value="${fechaStat.index}" />
+                                <form th:action="@{/llegadaClientes/deleteFecha}" method="post" th:classappend="${'form-row-delete-' + cliente.id + '-' + fechaStat.index}">
+                                    <!-- Your existing delete form elements -->
                                 </form>
                             </li>
                         </ul>
                     </td>
                     <td class="acciones-column">
-                        <!-- Button and form for creating a new fecha for the client -->
-                        <button th:data-clienteId="${cliente.id}" onclick="handleCreateButton(this)">C</button>
-                        <form th:action="@{/llegadaClientes/createFecha}" method="post" class="form-row" style="display: none;">
-                            <input type="hidden" name="clienteId" th:value="${cliente.id}" />
-                            <label for="nuevaFecha">Nueva Fecha:</label>
-                            <input type="date" id="nuevaFecha" name="nuevaFecha" required />
-                            <input type="submit" value="Agregar Fecha">
+                        <form th:action="@{/llegadaClientes/createFecha}" method="post" th:classappend="${'form-row-' + cliente.id}" style="display: none;">
+                            <!-- Your existing create form elements -->
                         </form>
                     </td>
                 </tr>
@@ -127,21 +126,31 @@
 
     <script>
         function handleCreateButton(button) {
-            // Toggle visibility of the create form row
-            var formRow = button.nextElementSibling;
-            formRow.style.display = (formRow.style.display === 'none' || formRow.style.display === '') ? 'table-row' : 'none';
-        }
-
-        function handleUpdateButton(button) {
-            // Toggle visibility of the update form row
-            var formRowUpdate = button.nextElementSibling;
-            formRowUpdate.style.display = (formRowUpdate.style.display === 'none' || formRowUpdate.style.display === '') ? 'table-row' : 'none';
+            var formClass = '.form-row-update-' + button.getAttribute('data-clienteId') + '-' + button.getAttribute('data-fechaIndex');
+            toggleFormVisibility(formClass);
         }
 
         function handleDeleteButton(button) {
-            // Get the form associated with the delete button and submit it
-            var form = button.nextElementSibling;
-            form.submit();
+            // Get the form class based on the button's data attributes
+            var formClass = '.form-row-delete-' + button.getAttribute('data-clienteId') + '-' + button.getAttribute('data-fechaIndex');
+            toggleFormVisibility(formClass);
+        }
+        function handleUpdateButton(button) {
+            // Get the form class based on the button's data attributes
+            var formClass = '.form-row-update-' + button.getAttribute('data-clienteId') + '-' + button.getAttribute('data-fechaIndex');
+            toggleFormVisibility(formClass);
+        }
+
+        function handleDeleteButton(button) {
+            // Get the form class based on the button's data attributes
+            var formClass = '.form-row-delete-' + button.getAttribute('data-clienteId') + '-' + button.getAttribute('data-fechaIndex');
+            toggleFormVisibility(formClass);
+        }
+
+        function toggleFormVisibility(formClass) {
+            // Toggle visibility of the form with the given class
+            var form = document.querySelector(formClass);
+            form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'table-row' : 'none';
         }
     </script>
 

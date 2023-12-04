@@ -16,6 +16,11 @@
             height: 100vh;
         }
 
+        .scrollable-container {
+            max-height: 500px; /* Set the desired height */
+            overflow-y: auto;
+        }
+
         .container {
             text-align: center;
             background-color: #fff;
@@ -62,21 +67,22 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Reservas</h1>
+<div class="scrollable-container">
+    <div class="container">
+        <h1>Reservas</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Número de reserva</th>
-                <th>Fecha entrada</th>
-                <th>Fecha salida</th>
-                <th>Número de personas</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-                <th><button onclick="handleCreateButton()">C</button></th>
-            </tr>
-        </thead>
+        <table>
+            <thead>
+                <tr>
+                    <th>Número de reserva</th>
+                    <th>Fecha entrada</th>
+                    <th>Fecha salida</th>
+                    <th>Número de personas</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                    <th><button onclick="handleCreateButton()">C</button></th>
+                </tr>
+            </thead>
         <tbody>
             <tr th:each="reserva, iterStat : ${reservas}">
                 <td th:text="${reserva.id}">Número de reserva</td>
@@ -86,6 +92,8 @@
                 <td th:text="${reserva.estado}">Estado</td>
                 <td class="acciones-column">
                     <button th:data-reserva-id="${reserva.id}" onclick="handleButtonClick(this)">U</button>
+                    <button th:data-reserva-id="${reserva.id}" onclick="handleDeleteButton(this)">D</button>
+
                 </td>
             </tr>
 
@@ -142,6 +150,27 @@
 
         var formRow = document.querySelector('.form-row');
         formRow.style.display = (formRow.style.display === 'none' || formRow.style.display === '') ? 'table-row' : 'none';
+    }
+    function handleDeleteButton(button) {
+        var reservaId = button.getAttribute('data-reserva-id');
+        var url = '/deleteReserva/' + reservaId;
+
+        fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+            })
+            .then(response => {
+                if (response.ok) {
+                    location.reload();
+                } else {
+                    console.error('Error deleting reserva');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }
 
     function handleSubmit(event) {

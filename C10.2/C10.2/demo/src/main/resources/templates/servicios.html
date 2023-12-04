@@ -16,6 +16,11 @@
             height: 100vh;
         }
 
+        .scrollable-container {
+            max-height: 500px; /* Set the desired height */
+            overflow-y: auto;
+        }
+
         .container {
             text-align: center;
             background-color: #fff;
@@ -57,20 +62,21 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Servicios</h1>
+<div class="scrollable-container">
+    <div class="container">
+        <h1>Servicios</h1>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Capacidad</th>
-            <th>Horario</th>
-            <th>Costo</th>
-            <th>Acciones</th>
-            <th><button onclick="handleCreateButton()">C</button></th> <!-- New column for Create button -->
-        </tr>
-        </thead>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Capacidad</th>
+                    <th>Horario</th>
+                    <th>Costo</th>
+                    <th>Acciones</th>
+                    <th><button onclick="handleCreateButton()">C</button></th> <!-- New column for Create button -->
+                </tr>
+            </thead>
         <tbody>
         <tr th:each="servicio : ${servicios}">
             <td th:text="${servicio.nombre}"></td>

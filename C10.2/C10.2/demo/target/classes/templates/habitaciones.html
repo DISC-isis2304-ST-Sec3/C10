@@ -16,6 +16,11 @@
             height: 100vh;
         }
 
+        .scrollable-container {
+            max-height: 500px; /* Set the desired height */
+            overflow-y: auto;
+        }
+
         .container {
             text-align: center;
             background-color: #fff;
@@ -66,24 +71,25 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Habitaciones</h1>
+<div class="scrollable-container">
+    <div class="container">
+        <h1>Habitaciones</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Número</th>
-                <th>Tipo</th>
-                <th>Capacidad máxima</th>
-                <th>Dotación</th>
-                <th>Estado</th>
-                <th>Tarifa</th>
-                <th>Acciones</th>
-                <th>
-                    <button class="acciones-column button delete-button" onclick="handleCreateButton()">C</button>
-                </th>
-            </tr>
-        </thead>
+        <table>
+            <thead>
+                <tr>
+                    <th>Número</th>
+                    <th>Tipo</th>
+                    <th>Capacidad máxima</th>
+                    <th>Dotación</th>
+                    <th>Estado</th>
+                    <th>Tarifa</th>
+                    <th>Acciones</th>
+                    <th>
+                        <button class="acciones-column button delete-button" onclick="handleCreateButton()">C</button>
+                    </th>
+                </tr>
+            </thead>
         <tbody>
             <tr th:each="habitacion, iterStat : ${habitaciones}">
                 <td th:text="${iterStat.count}">1</td>
